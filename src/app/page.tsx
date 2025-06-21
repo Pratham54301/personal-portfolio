@@ -219,9 +219,9 @@ export default function Home() {
       {/* Contact Section */}
       <section id="contact" className="py-20">
           <div className="text-center mb-12">
-            <h2 className="font-headline text-3xl md:text-4xl font-bold">Contact Me</h2>
+            <h2 className="font-headline text-3xl md:text-4xl font-bold">Send a Message</h2>
             <p className="text-muted-foreground mt-2 max-w-2xl mx-auto">
-              Have a project in mind or just want to say hello? Drop me a line.
+              Have a question or a project in mind? I'd love to hear from you. I'll get back to you within 24 hours.
             </p>
           </div>
           <div className="grid md:grid-cols-3 gap-12">
