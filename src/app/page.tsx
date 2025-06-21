@@ -1,7 +1,7 @@
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
-import { Briefcase, Calendar, Code, Download, Github, GraduationCap, Instagram, Linkedin, Mail, PenTool, Server, Star, Twitter, Users, Wind, Atom, GitBranch, Cloud, Network, Palette } from 'lucide-react';
+import { Briefcase, Calendar, Code, Download, Github, GraduationCap, Instagram, Linkedin, Mail, PenTool, Server, Star, Twitter, Users, Wind, Atom, GitBranch, Cloud, Network, Palette, Database } from 'lucide-react';
 import Image from 'next/image';
 import Link from 'next/link';
 import { AnimatedCounter } from '@/components/animated-counter';
@@ -9,15 +9,20 @@ import { Timeline } from '@/components/timeline';
 import { ContactForm } from '@/components/contact-form';
 import { ContactSocials } from '@/components/contact-socials';
 import { BlogSection } from '@/components/blog-section';
-import { Progress } from '@/components/ui/progress';
 
-const skillsWithProgress = [
-    { name: 'HTML5', percentage: 98 },
-    { name: 'CSS3', percentage: 95 },
-    { name: 'JavaScript', percentage: 70 },
-    { name: 'React JS', percentage: 60 },
-    { name: 'Team Management', percentage: 90 },
-    { name: 'Project Management', percentage: 85 },
+const skills = [
+    { name: 'HTML5', icon: <Code className="w-full h-full" /> },
+    { name: 'CSS3', icon: <Palette className="w-full h-full" /> },
+    { name: 'JavaScript', icon: <Code className="w-full h-full" /> },
+    { name: 'React JS', icon: <Atom className="w-full h-full" /> },
+    { name: 'Node.js', icon: <Server className="w-full h-full" /> },
+    { name: 'Express.js', icon: <Network className="w-full h-full" /> },
+    { name: 'Firebase', icon: <Cloud className="w-full h-full" /> },
+    { name: 'MongoDB', icon: <Database className="w-full h-full" /> },
+    { name: 'Git', icon: <GitBranch className="w-full h-full" /> },
+    { name: 'GitHub', icon: <Github className="w-full h-full" /> },
+    { name: 'Figma', icon: <PenTool className="w-full h-full" /> },
+    { name: 'Team Management', icon: <Users className="w-full h-full" /> },
 ];
 
 const projects = [
@@ -161,14 +166,11 @@ export default function Home() {
             {/* Skills Section */}
             <section id="skills" className="mb-20">
               <h2 className="font-headline text-3xl md:text-4xl font-bold text-center mb-12 uppercase">My Skills</h2>
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-8 max-w-4xl mx-auto">
-                {skillsWithProgress.map((skill) => (
-                  <div key={skill.name} className="w-full space-y-2">
-                    <div className="flex justify-between items-end">
-                      <p className="font-semibold text-lg">{skill.name}</p>
-                      <p className="text-sm text-gray-400">{skill.percentage}%</p>
-                    </div>
-                    <Progress value={skill.percentage} className="h-2.5 bg-gray-700" indicatorClassName="bg-accent-green-neon" />
+               <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-8 max-w-4xl mx-auto">
+                {skills.map((skill) => (
+                  <div key={skill.name} className="flex flex-col items-center justify-center gap-4 p-4 rounded-lg bg-slate-800 border border-slate-700 hover:border-accent-green-neon hover:-translate-y-1 transition-all duration-300">
+                    <div className="text-accent-green-neon w-12 h-12">{skill.icon}</div>
+                    <p className="font-semibold text-center">{skill.name}</p>
                   </div>
                 ))}
               </div>
