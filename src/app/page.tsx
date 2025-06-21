@@ -7,6 +7,7 @@ import Link from 'next/link';
 import { AnimatedCounter } from '@/components/animated-counter';
 import { Timeline } from '@/components/timeline';
 import { ContactForm } from '@/components/contact-form';
+import { ContactSocials } from '@/components/contact-socials';
 
 const skills = [
   { icon: <PenTool className="w-10 h-10 text-primary" />, title: 'Figma' },
@@ -192,6 +193,7 @@ export default function Home() {
               <ContactForm />
             </div>
           </div>
+          <ContactSocials />
       </section>
     </div>
   )
