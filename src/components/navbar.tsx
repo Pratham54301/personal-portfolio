@@ -9,43 +9,70 @@ import { Menu, X } from 'lucide-react';
 import { Button } from './ui/button';
 
 const navLinks = [
-  { href: '/', label: 'Home' },
-  { href: '/about', label: 'About' },
-  { href: '/projects', label: 'Projects' },
-  { href: '/contact', label: 'Contact' },
+  { href: '/#home', label: 'Home', sectionId: 'home' },
+  { href: '/#about', label: 'About', sectionId: 'about' },
+  { href: '/#skills', label: 'Skills', sectionId: 'skills' },
+  { href: '/#projects', label: 'Projects', sectionId: 'projects' },
+  { href: '/#contact', label: 'Contact', sectionId: 'contact' },
 ];
 
 export function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [activeSection, setActiveSection] = useState('home');
   const pathname = usePathname();
 
   useEffect(() => {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 20);
     };
-    window.addEventListener('scroll', handleScroll);
+    window.addEventListener('scroll', handleScroll, { passive: true });
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            setActiveSection(entry.target.id);
+          }
+        });
+      },
+      {
+        rootMargin: '-50% 0px -50% 0px', // Trigger when the section is in the middle of the viewport
+      }
+    );
+
+    const sections = navLinks.map(link => document.getElementById(link.sectionId)).filter(Boolean);
+    sections.forEach(section => observer.observe(section!));
+
+    return () => {
+      sections.forEach(section => observer.unobserve(section!));
+    };
+  }, []);
+
   const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
+
+  // If not on the homepage, default to the page's path.
+  const currentPath = pathname === '/' ? `#${activeSection}` : pathname;
 
   return (
     <motion.header
       className={cn(
         'fixed top-0 left-0 right-0 z-40 transition-all duration-300',
-        isScrolled ? 'py-2 bg-background/80 backdrop-blur-lg shadow-md' : 'py-6 bg-transparent'
+        isScrolled || isMenuOpen ? 'py-2 bg-background/80 backdrop-blur-lg shadow-md' : 'py-6 bg-transparent'
       )}
     >
       <div className="container mx-auto flex items-center justify-between px-4">
-        <Link href="/" className="font-headline text-2xl font-bold text-primary">
-          PS
+        <Link href="/#home" className="font-headline text-2xl font-bold text-primary">
+          Pratham
         </Link>
         <nav className="hidden md:flex items-center gap-6">
-          {navLinks.map(({ href, label }) => (
+          {navLinks.map(({ href, label, sectionId }) => (
             <Link key={href} href={href} className={cn(
                 "font-medium transition-colors hover:text-accent",
-                pathname === href ? 'text-accent' : 'text-foreground/60'
+                activeSection === sectionId && pathname === '/' ? 'text-accent' : 'text-foreground/60'
               )}>
               {label}
             </Link>
@@ -54,7 +81,8 @@ export function Navbar() {
         <div className="hidden md:block">
           <ThemeToggle />
         </div>
-        <div className="md:hidden">
+        <div className="md:hidden flex items-center gap-2">
+          <ThemeToggle />
           <Button onClick={toggleMenu} variant="ghost" size="icon">
             {isMenuOpen ? <X /> : <Menu />}
             <span className="sr-only">Toggle menu</span>
@@ -71,17 +99,14 @@ export function Navbar() {
           >
             <div className="bg-background/95 backdrop-blur-lg">
                 <nav className="container mx-auto flex flex-col items-center gap-4 py-4 px-4">
-                    {navLinks.map(({ href, label }) => (
+                    {navLinks.map(({ href, label, sectionId }) => (
                     <Link key={href} href={href} onClick={() => setIsMenuOpen(false)} className={cn(
                         "w-full text-center font-medium text-lg py-2 transition-colors hover:text-accent rounded-md",
-                        pathname === href ? 'text-accent bg-accent/10' : 'text-foreground/80'
+                        activeSection === sectionId ? 'text-accent bg-accent/10' : 'text-foreground/80'
                         )}>
                         {label}
                     </Link>
                     ))}
-                    <div className="mt-2">
-                        <ThemeToggle />
-                    </div>
                 </nav>
             </div>
           </motion.div>
