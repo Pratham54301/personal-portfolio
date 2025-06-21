@@ -19,6 +19,7 @@ const skills = [
     { name: 'Firebase', icon: <Cloud className="w-full h-full" /> },
     { name: 'GitHub', icon: <Github className="w-full h-full" /> },
     { name: 'Figma', icon: <PenTool className="w-full h-full" /> },
+    { name: 'Adobe XD', icon: <PenTool className="w-full h-full" /> },
     { name: 'Team Management', icon: <Users className="w-full h-full" /> },
     { name: 'Project Management', icon: <Briefcase className="w-full h-full" /> },
 ];
