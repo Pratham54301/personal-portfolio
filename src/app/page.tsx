@@ -72,11 +72,25 @@ export default function Home() {
             </div>
           </div>
         </div>
-        <div className="flex-shrink-0">
-           <Avatar className="w-48 h-48 md:w-72 md:h-72 border-4 border-primary shadow-lg">
-            <AvatarImage src="https://placehold.co/400x400.png" alt="Pratham S" data-ai-hint="professional portrait" />
-            <AvatarFallback>PS</AvatarFallback>
-          </Avatar>
+        <div className="flex-shrink-0 flex justify-center">
+            <div className="relative group w-[280px] h-[400px] lg:w-[320px] lg:h-[450px]">
+                <div className="absolute w-full h-full rounded-xl overflow-hidden shadow-xl transition-all duration-300 ease-in-out group-hover:scale-105 group-hover:shadow-2xl">
+                    <Image
+                        src="https://placehold.co/400x560.png"
+                        alt="Pratham S"
+                        width={400}
+                        height={560}
+                        className="w-full h-full object-cover"
+                        data-ai-hint="professional portrait developer"
+                        priority
+                    />
+                    {/* Top-left angular cut */}
+                    <div className="absolute top-0 left-0 w-0 h-0 border-solid border-t-[60px] lg:border-t-[80px] border-t-accent-green border-r-[60px] lg:border-r-[80px] border-r-transparent"></div>
+                    
+                    {/* Bottom-right angular cut */}
+                    <div className="absolute bottom-0 right-0 w-0 h-0 border-solid border-b-[60px] lg:border-b-[80px] border-b-primary border-l-[60px] lg:border-l-[80px] border-l-transparent"></div>
+                </div>
+            </div>
         </div>
       </section>
       

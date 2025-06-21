@@ -23,6 +23,7 @@ export default {
         code: ['monospace'],
       },
       colors: {
+        'accent-green': '#24AB63',
         'css-pink': '#FF4081',
         'frontend-blue': '#03A9F4',
         background: 'hsl(var(--background))',
