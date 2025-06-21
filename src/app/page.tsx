@@ -9,19 +9,15 @@ import { Timeline } from '@/components/timeline';
 import { ContactForm } from '@/components/contact-form';
 import { ContactSocials } from '@/components/contact-socials';
 import { BlogSection } from '@/components/blog-section';
+import { Progress } from '@/components/ui/progress';
 
-const skills = [
-  { icon: <PenTool className="w-10 h-10 text-primary" />, title: 'Figma' },
-  { icon: <Code className="w-10 h-10 text-primary" />, title: 'HTML5' },
-  { icon: <Palette className="w-10 h-10 text-primary" />, title: 'CSS3' },
-  { icon: <Code className="w-10 h-10 text-primary" />, title: 'JavaScript' },
-  { icon: <Atom className="w-10 h-10 text-primary" />, title: 'React' },
-  { icon: <Network className="w-10 h-10 text-primary" />, title: 'Next.js' },
-  { icon: <Server className="w-10 h-10 text-primary" />, title: 'Node JS' },
-  { icon: <Wind className="w-10 h-10 text-primary" />, title: 'Tailwind' },
-  { icon: <GitBranch className="w-10 h-10 text-primary" />, title: 'Git' },
-  { icon: <Github className="w-10 h-10 text-primary" />, title: 'GitHub' },
-  { icon: <Cloud className="w-10 h-10 text-primary" />, title: 'Vercel' },
+const skillsWithProgress = [
+    { name: 'HTML5', percentage: 98 },
+    { name: 'CSS3', percentage: 95 },
+    { name: 'JavaScript', percentage: 70 },
+    { name: 'React JS', percentage: 60 },
+    { name: 'Team Management', percentage: 90 },
+    { name: 'Project Management', percentage: 85 },
 ];
 
 const projects = [
@@ -30,21 +26,49 @@ const projects = [
     { title: 'Data Visualization Dashboard', description: 'An analytics dashboard that presents complex data sets through interactive charts and graphs.', imageUrl: 'https://placehold.co/600x400.png', dataAiHint: 'analytics dashboard', liveUrl: '#', codeUrl: '#' },
 ];
 
-const timelineItems = [
+const myTimelineItems = [
+    {
+        icon: <Briefcase />,
+        date: '2024 - Present',
+        title: 'Frontend Developer',
+        subtitle: 'Some Company, Remote',
+        description: 'Developing and maintaining user-facing features using React.js and modern frontend technologies.'
+    },
     {
         icon: <GraduationCap />,
-        date: '2021-2025',
+        date: '2021 - 2025',
         title: 'B.Tech in Computer Science',
         subtitle: 'ABC Institute of Technology',
         description: 'Completed a comprehensive curriculum focused on software development, algorithms, and data structures.'
     },
+     {
+        icon: <Briefcase />,
+        date: '2023',
+        title: 'Data Entry Operator',
+        subtitle: 'Freelance',
+        description: 'Managed and processed large volumes of data with high accuracy and efficiency.'
+    },
     {
         icon: <Briefcase />,
-        date: 'Summer 2024',
-        title: 'Software Engineer Intern',
-        subtitle: 'Tech Solutions Inc.',
-        description: 'Worked on the front-end of a major client-facing application using React and TypeScript, contributing to a 15% improvement in load times.'
-    }
+        date: '2022',
+        title: 'Booking Executive',
+        subtitle: 'Local Travel Agency',
+        description: 'Handled customer inquiries and bookings, ensuring a smooth and pleasant travel experience.'
+    },
+     {
+        icon: <GraduationCap />,
+        date: '2020 - 2021',
+        title: '12th Grade',
+        subtitle: 'XYZ Senior Secondary School',
+        description: 'Focused on science and mathematics, building a strong analytical foundation.'
+    },
+     {
+        icon: <GraduationCap />,
+        date: '2018 - 2019',
+        title: '10th Grade',
+        subtitle: 'Devsaya International School',
+        description: 'Achieved high grades and developed a keen interest in technology and science.'
+    },
 ];
 
 export default function Home() {
@@ -131,25 +155,33 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Skills Section */}
-      <section id="skills" className="py-20 text-center">
-        <h2 className="font-headline text-3xl md:text-4xl font-bold mb-2">My Skills</h2>
-        <p className="text-muted-foreground mb-12">My Technical Level</p>
-        <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-8">
-          {skills.map((skill) => (
-            <div key={skill.title} className="flex flex-col items-center gap-3">
-              {skill.icon}
-              <p className="font-semibold">{skill.title}</p>
-            </div>
-          ))}
-        </div>
-      </section>
+      {/* Skills & Timeline Section Wrapper */}
+      <div className="bg-slate-900 text-white py-20 -mx-4 px-4 sm:mx-0 sm:rounded-2xl">
+          <div className="container mx-auto">
+            {/* Skills Section */}
+            <section id="skills" className="mb-20">
+              <h2 className="font-headline text-3xl md:text-4xl font-bold text-center mb-12 uppercase">My Skills</h2>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-8 max-w-4xl mx-auto">
+                {skillsWithProgress.map((skill) => (
+                  <div key={skill.name} className="w-full space-y-2">
+                    <div className="flex justify-between items-end">
+                      <p className="font-semibold text-lg">{skill.name}</p>
+                      <p className="text-sm text-gray-400">{skill.percentage}%</p>
+                    </div>
+                    <Progress value={skill.percentage} className="h-2.5 bg-gray-700" indicatorClassName="bg-accent-green-neon" />
+                  </div>
+                ))}
+              </div>
+            </section>
 
-      {/* Timeline Section */}
-      <section id="timeline" className="py-20">
-         <h2 className="font-headline text-3xl md:text-4xl font-bold text-center mb-12">Education & Experience</h2>
-         <Timeline items={timelineItems} />
-      </section>
+            {/* Timeline Section */}
+            <section id="timeline">
+              <h2 className="font-headline text-3xl md:text-4xl font-bold text-center mb-12 uppercase">My Timeline</h2>
+              <Timeline items={myTimelineItems} />
+            </section>
+          </div>
+      </div>
+
 
       {/* Projects Section */}
       <section id="projects" className="py-20">

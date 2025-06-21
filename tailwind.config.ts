@@ -24,6 +24,7 @@ export default {
       },
       colors: {
         'accent-green': '#24AB63',
+        'accent-green-neon': '#00FF9D',
         'css-pink': '#FF4081',
         'frontend-blue': '#03A9F4',
         background: 'hsl(var(--background))',

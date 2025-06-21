@@ -18,42 +18,31 @@ export function Timeline({ items }: TimelineProps) {
   return (
     <div className="relative">
       {/* Vertical line */}
-      <div className="absolute left-1/2 top-0 h-full w-px -translate-x-1/2 bg-border"></div>
+      <div className="absolute left-6 top-0 h-full w-px -translate-x-1/2 bg-border/50"></div>
 
       {items.map((item, index) => (
         <div
           key={index}
-          className={cn(
-            'relative mb-12 flex w-full items-center',
-            index % 2 === 0 ? 'justify-start' : 'justify-end'
-          )}
+          className="relative mb-8 flex w-full items-start justify-start"
         >
+          {/* Dot on the timeline */}
           <div
-            className={cn(
-              'relative w-full max-w-md',
-              index % 2 === 0 ? 'pr-8 md:pr-12' : 'pl-8 md:pl-12'
-            )}
+            className="absolute left-6 top-5 -translate-x-1/2 flex h-8 w-8 items-center justify-center rounded-full bg-primary text-primary-foreground"
           >
-            {/* Dot on the timeline */}
-            <div
-              className={cn(
-                'absolute top-1/2 -translate-y-1/2 flex h-8 w-8 items-center justify-center rounded-full bg-primary text-primary-foreground',
-                index % 2 === 0 ? '-right-4' : '-left-4'
-              )}
-            >
-              {item.icon}
-            </div>
-
-            <Card>
-              <CardHeader>
-                <div className="text-xs text-muted-foreground">{item.date}</div>
-                <CardTitle className="font-headline text-lg text-primary">{item.title}</CardTitle>
-                <div className="font-semibold">{item.subtitle}</div>
-              </CardHeader>
-              <CardContent>
-                <p className="text-sm text-muted-foreground">{item.description}</p>
-              </CardContent>
-            </Card>
+            {item.icon}
+          </div>
+          
+          <div className="w-full pl-16">
+             <Card className="bg-slate-800 border-slate-700">
+                <CardHeader>
+                    <div className="text-sm text-accent-green-neon">{item.date}</div>
+                    <CardTitle className="font-headline text-lg text-white">{item.title}</CardTitle>
+                    <div className="font-semibold text-gray-300">{item.subtitle}</div>
+                </CardHeader>
+                <CardContent>
+                    <p className="text-sm text-gray-400">{item.description}</p>
+                </CardContent>
+             </Card>
           </div>
         </div>
       ))}
