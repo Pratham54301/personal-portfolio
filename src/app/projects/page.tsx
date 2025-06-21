@@ -73,7 +73,7 @@ export default function ProjectsPage() {
 
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
         {allProjects.map((project) => (
-          <Card key={project.title} className="flex flex-col overflow-hidden group">
+          <Card key={project.title} className="flex flex-col overflow-hidden group transition-all duration-300 hover:shadow-lg hover:border-accent">
             <div className="overflow-hidden">
                 <Image
                 src={project.imageUrl}
@@ -85,7 +85,7 @@ export default function ProjectsPage() {
                 />
             </div>
             <CardHeader>
-              <CardTitle className="font-headline text-xl">{project.title}</CardTitle>
+              <CardTitle className="font-headline text-xl text-primary">{project.title}</CardTitle>
             </CardHeader>
             <CardContent className="flex flex-col flex-grow">
               <div className="flex-grow">

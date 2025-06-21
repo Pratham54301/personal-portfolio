@@ -44,8 +44,8 @@ export function Navbar() {
         <nav className="hidden md:flex items-center gap-6">
           {navLinks.map(({ href, label }) => (
             <Link key={href} href={href} className={cn(
-                "font-medium transition-colors hover:text-primary",
-                pathname === href ? 'text-primary' : 'text-foreground/60'
+                "font-medium transition-colors hover:text-accent",
+                pathname === href ? 'text-accent' : 'text-foreground/60'
               )}>
               {label}
             </Link>
@@ -73,8 +73,8 @@ export function Navbar() {
                 <nav className="container mx-auto flex flex-col items-center gap-4 py-4 px-4">
                     {navLinks.map(({ href, label }) => (
                     <Link key={href} href={href} onClick={() => setIsMenuOpen(false)} className={cn(
-                        "w-full text-center font-medium text-lg py-2 transition-colors hover:text-primary rounded-md",
-                        pathname === href ? 'text-primary bg-primary/10' : 'text-foreground/80'
+                        "w-full text-center font-medium text-lg py-2 transition-colors hover:text-accent rounded-md",
+                        pathname === href ? 'text-accent bg-accent/10' : 'text-foreground/80'
                         )}>
                         {label}
                     </Link>

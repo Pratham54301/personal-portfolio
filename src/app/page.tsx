@@ -21,7 +21,7 @@ export default function Home() {
   return (
     <div className="container mx-auto px-4">
       <section className="text-center py-20 md:py-32">
-        <h1 className="font-headline text-4xl md:text-6xl font-bold tracking-tight mb-4">
+        <h1 className="font-headline text-4xl md:text-6xl font-bold tracking-tight mb-4 text-primary">
           Hi, I&apos;m Pratham S
         </h1>
         <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto mb-8">
@@ -63,15 +63,15 @@ export default function Home() {
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {projects.map((project) => (
-                <Card key={project.title} className="overflow-hidden group">
+                <Card key={project.title} className="overflow-hidden group transition-all duration-300 hover:shadow-lg hover:border-accent">
                     <Image src={project.imageUrl} alt={project.title} width={600} height={400} className="w-full h-auto object-cover group-hover:scale-105 transition-transform duration-300" data-ai-hint={project.dataAiHint} />
                     <CardHeader>
-                        <CardTitle className="font-headline">{project.title}</CardTitle>
+                        <CardTitle className="font-headline text-primary">{project.title}</CardTitle>
                     </CardHeader>
                     <CardContent>
                         <p className="text-muted-foreground mb-4">{project.description}</p>
                         <div className="flex gap-4">
-                            <Button asChild variant="default">
+                            <Button asChild>
                                 <Link href={project.liveUrl}>Live Demo</Link>
                             </Button>
                              <Button asChild variant="outline">
