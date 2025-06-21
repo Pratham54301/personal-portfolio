@@ -99,18 +99,20 @@ export default function Home() {
           <p className="text-lg md:text-xl text-muted-foreground max-w-xl">
             A passionate full-stack developer creating modern, responsive, and user-friendly web applications.
           </p>
-          <div className="flex flex-wrap justify-center md:justify-start items-center gap-4">
-            <Button asChild size="lg">
-              <Link href="/Pratham-Resume.pdf" target="_blank">Download CV <Download className="ml-2" /></Link>
-            </Button>
-            <Button asChild size="lg">
-              <Link href="https://forms.gle/7axq8mV9Y5T9YhmL8" target="_blank" rel="noopener noreferrer">Inquiry Now</Link>
-            </Button>
+          <div className="flex flex-col items-center md:items-start gap-6">
+            <div className="flex flex-wrap justify-center md:justify-start gap-4">
+              <Button asChild size="lg">
+                <Link href="/Pratham-Resume.pdf" target="_blank">Download CV <Download className="ml-2" /></Link>
+              </Button>
+              <Button asChild size="lg">
+                <Link href="https://forms.gle/7axq8mV9Y5T9YhmL8" target="_blank" rel="noopener noreferrer">Inquiry Now</Link>
+              </Button>
+            </div>
             <div className="flex items-center gap-4">
-               <Link href="#" aria-label="LinkedIn" className="text-foreground/80 hover:text-accent transition-colors"><Linkedin /></Link>
-               <Link href="#" aria-label="GitHub" className="text-foreground/80 hover:text-accent transition-colors"><Github /></Link>
-               <Link href="#" aria-label="Twitter" className="text-foreground/80 hover:text-accent transition-colors"><Twitter /></Link>
-               <Link href="#" aria-label="Instagram" className="text-foreground/80 hover:text-accent transition-colors"><Instagram /></Link>
+               <Link href="#" aria-label="LinkedIn" className="bg-primary text-primary-foreground p-3 rounded-full inline-flex items-center justify-center hover:bg-accent transition-colors"><Linkedin /></Link>
+               <Link href="#" aria-label="GitHub" className="bg-primary text-primary-foreground p-3 rounded-full inline-flex items-center justify-center hover:bg-accent transition-colors"><Github /></Link>
+               <Link href="#" aria-label="Twitter" className="bg-primary text-primary-foreground p-3 rounded-full inline-flex items-center justify-center hover:bg-accent transition-colors"><Twitter /></Link>
+               <Link href="#" aria-label="Instagram" className="bg-primary text-primary-foreground p-3 rounded-full inline-flex items-center justify-center hover:bg-accent transition-colors"><Instagram /></Link>
             </div>
           </div>
         </div>
@@ -174,15 +176,15 @@ export default function Home() {
       </section>
 
       {/* Skills & Timeline Section Wrapper */}
-      <div className="py-20 -mx-4 px-4 sm:mx-0 sm:rounded-2xl dark:bg-slate-900/50">
+      <div className="py-20 -mx-4 px-4 sm:mx-0 sm:rounded-2xl dark:bg-card/50">
           <div className="container mx-auto">
             {/* Skills Section */}
             <section id="skills" className="mb-20">
               <h2 className="font-headline text-3xl md:text-4xl font-bold text-center mb-12 uppercase">My Skills</h2>
                <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-8 max-w-4xl mx-auto">
                 {skills.map((skill) => (
-                  <div key={skill.name} className="flex flex-col items-center justify-center gap-4 p-4 rounded-lg bg-card/50 dark:bg-slate-800/50 border border-border/50 dark:border-slate-700/50 hover:border-accent-green-neon hover:-translate-y-1 transition-all duration-300">
-                    <div className="text-accent-green-neon w-12 h-12">{skill.icon}</div>
+                  <div key={skill.name} className="flex flex-col items-center justify-center gap-4 p-4 rounded-lg bg-card/50 dark:bg-slate-800/50 border border-border/50 dark:border-slate-700/50 hover:border-primary hover:-translate-y-1 transition-all duration-300">
+                    <div className="text-primary w-12 h-12">{skill.icon}</div>
                     <p className="font-semibold text-center">{skill.name}</p>
                   </div>
                 ))}
@@ -232,9 +234,9 @@ export default function Home() {
       {/* Contact Section */}
       <section id="contact" className="py-20">
           <div className="text-center mb-12">
-            <h2 className="font-headline text-3xl md:text-4xl font-bold">Send a Message</h2>
+            <h2 className="font-headline text-3xl md:text-4xl font-bold">Let's Talk</h2>
             <p className="text-muted-foreground mt-2 max-w-2xl mx-auto">
-              Have a question or a project in mind? I'd love to hear from you. I'll get back to you within 24 hours.
+              I'll get back to you within 24 hours.
             </p>
           </div>
           <div className="grid md:grid-cols-1 lg:grid-cols-5 gap-12">
