@@ -102,7 +102,7 @@ export default function Home() {
           <div className="flex flex-col items-center md:items-start gap-6">
             <div className="flex flex-wrap justify-center md:justify-start gap-4">
               <Button asChild size="lg">
-                <Link href="/Pratham-Resume.pdf" target="_blank">Download CV <Download className="ml-2" /></Link>
+                <Link href="/prathamkumar-resume.pdf" target="_blank">Download CV <Download className="ml-2" /></Link>
               </Button>
               <Button asChild size="lg">
                 <Link href="https://forms.gle/7axq8mV9Y5T9YhmL8" target="_blank" rel="noopener noreferrer">Inquiry Now</Link>
