@@ -2,7 +2,7 @@
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
-import { motion } from 'framer-motion';
+import { motion, AnimatePresence } from 'framer-motion';
 import { ThemeToggle } from './theme-toggle';
 import { cn } from '@/lib/utils';
 import { Menu, X } from 'lucide-react';
