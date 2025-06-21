@@ -1,3 +1,4 @@
+
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
@@ -97,7 +98,7 @@ export default function Home() {
             <span className="text-primary">Pratham S</span>
           </h1>
           <p className="text-lg md:text-xl text-muted-foreground max-w-xl">
-            A passionate full-stack developer creating modern, responsive, and user-friendly web applications.
+            A passionate Frontend developer creating modern, responsive, and user-friendly web applications.
           </p>
           <div className="flex flex-col items-center md:items-start gap-6">
             <div className="flex flex-wrap justify-center md:justify-start gap-4">
@@ -120,18 +121,14 @@ export default function Home() {
             <div className="relative group w-[280px] h-[400px] lg:w-[320px] lg:h-[450px]">
                 <div className="absolute w-full h-full rounded-xl overflow-hidden shadow-xl transition-all duration-300 ease-in-out group-hover:scale-105 group-hover:shadow-2xl">
                     <Image
-                        src="/photo2.jpg"
+                        src="/hero.jpg"
                         alt="Pratham S"
                         width={400}
                         height={560}
                         className="w-full h-full object-cover"
                         priority
                     />
-                    {/* Top-left angular cut */}
-                    <div className="absolute top-0 left-0 w-0 h-0 border-solid border-t-[60px] lg:border-t-[80px] border-t-accent-green border-r-[60px] lg:border-r-[80px] border-r-transparent"></div>
                     
-                    {/* Bottom-right angular cut */}
-                    <div className="absolute bottom-0 right-0 w-0 h-0 border-solid border-b-[60px] lg:border-b-[80px] border-b-primary border-l-[60px] lg:border-l-[80px] border-l-transparent"></div>
                 </div>
             </div>
         </div>
@@ -141,7 +138,7 @@ export default function Home() {
       <section id="about" className="py-20">
          <div className="grid md:grid-cols-3 gap-12 items-center">
             <div className="md:col-span-1 flex justify-center">
-                <Image src="/photo1.jpg" alt="About Pratham S" width={400} height={500} className="rounded-lg shadow-lg" />
+                <Image src="/about.JPG" alt="About Pratham S" width={400} height={500} className="rounded-lg shadow-lg" />
             </div>
             <div className="md:col-span-2 space-y-6">
                 <h2 className="font-headline text-3xl md:text-4xl font-bold">About Me</h2>
