@@ -31,17 +31,10 @@ const socials = [
             width="24"
             height="24"
             viewBox="0 0 24 24"
-            fill="none"
-            stroke="currentColor"
-            strokeWidth="2"
-            strokeLinecap="round"
-            strokeLinejoin="round"
+            fill="currentColor"
             className="w-5 h-5"
         >
-            <path d="M19.3 9.4c-1.2-.5-2.6-.8-4.2-.8-3.3 0-6 2.1-6 5.2 0 2.4 1.8 4.3 4.5 4.3 2.9 0 4.6-2.1 4.6-4.4 0-.4 0-.8-.1-1.2" />
-            <path d="M14.2 11.8h-3.8" />
-            <path d="M15.4 6.3H9.9c.2-.5.5-1.1.8-1.5.8-1.1 2.2-1.8 3.8-1.8 1.4 0 2.8.5 3.8 1.4.5.4.9.9 1.2 1.5" />
-            <path d="M3 7.4h6.5" />
+            <path d="M14.125 14.053h-3.46v-3.46h3.46c.99 0 1.801.81 1.801 1.73s-.81 1.73-1.8 1.73zM22 6.5h-6c-1.104 0-2 .896-2 2v8c0 1.104.896 2 2 2h6v-2h-6v-2.5h4V12h-4V9.5h6V6.5zM14 6.5h-5v9h5c2.209 0 4-1.791 4-4s-1.791-5-4-5z"/>
         </svg>
     ),
   },
