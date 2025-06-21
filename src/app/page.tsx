@@ -1,7 +1,7 @@
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
-import { Briefcase, Calendar, Code, Download, Github, GraduationCap, Instagram, Linkedin, Mail, PenTool, Server, Star, Twitter, Users, Wind, Atom, GitBranch, Cloud, Network, Palette, Database } from 'lucide-react';
+import { Briefcase, Calendar, Code, Download, Github, GraduationCap, Instagram, Linkedin, PenTool, Star, Twitter, Users, Atom, Cloud, Palette } from 'lucide-react';
 import Image from 'next/image';
 import Link from 'next/link';
 import { AnimatedCounter } from '@/components/animated-counter';
@@ -16,14 +16,11 @@ const skills = [
     { name: 'CSS3', icon: <Palette className="w-full h-full" /> },
     { name: 'JavaScript', icon: <Code className="w-full h-full" /> },
     { name: 'React JS', icon: <Atom className="w-full h-full" /> },
-    { name: 'Node.js', icon: <Server className="w-full h-full" /> },
-    { name: 'Express.js', icon: <Network className="w-full h-full" /> },
     { name: 'Firebase', icon: <Cloud className="w-full h-full" /> },
-    { name: 'MongoDB', icon: <Database className="w-full h-full" /> },
-    { name: 'Git', icon: <GitBranch className="w-full h-full" /> },
     { name: 'GitHub', icon: <Github className="w-full h-full" /> },
     { name: 'Figma', icon: <PenTool className="w-full h-full" /> },
     { name: 'Team Management', icon: <Users className="w-full h-full" /> },
+    { name: 'Project Management', icon: <Briefcase className="w-full h-full" /> },
 ];
 
 const projects = [
