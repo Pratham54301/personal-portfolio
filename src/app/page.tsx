@@ -120,7 +120,7 @@ export default function Home() {
             <div className="relative group w-[280px] h-[400px] lg:w-[320px] lg:h-[450px]">
                 <div className="absolute w-full h-full rounded-xl overflow-hidden shadow-xl transition-all duration-300 ease-in-out group-hover:scale-105 group-hover:shadow-2xl">
                     <Image
-                        src="[IMAGE_URL_2]"
+                        src="/photo2.jpg"
                         alt="Pratham S"
                         width={400}
                         height={560}
@@ -141,7 +141,7 @@ export default function Home() {
       <section id="about" className="py-20">
          <div className="grid md:grid-cols-3 gap-12 items-center">
             <div className="md:col-span-1 flex justify-center">
-                <Image src="[IMAGE_URL_1]" alt="About Pratham S" width={400} height={500} className="rounded-lg shadow-lg" />
+                <Image src="/photo1.jpg" alt="About Pratham S" width={400} height={500} className="rounded-lg shadow-lg" />
             </div>
             <div className="md:col-span-2 space-y-6">
                 <h2 className="font-headline text-3xl md:text-4xl font-bold">About Me</h2>
