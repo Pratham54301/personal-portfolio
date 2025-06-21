@@ -33,14 +33,14 @@ export function Timeline({ items }: TimelineProps) {
           </div>
           
           <div className="w-full pl-16">
-             <Card className="bg-slate-800 border-slate-700">
+             <Card className="bg-card dark:bg-slate-800 border-border dark:border-slate-700">
                 <CardHeader>
                     <div className="text-sm text-accent-green-neon">{item.date}</div>
-                    <CardTitle className="font-headline text-lg text-white">{item.title}</CardTitle>
-                    <div className="font-semibold text-gray-300">{item.subtitle}</div>
+                    <CardTitle className="font-headline text-lg">{item.title}</CardTitle>
+                    <div className="font-semibold text-muted-foreground">{item.subtitle}</div>
                 </CardHeader>
                 <CardContent>
-                    <p className="text-sm text-gray-400">{item.description}</p>
+                    <p className="text-sm text-muted-foreground">{item.description}</p>
                 </CardContent>
              </Card>
           </div>

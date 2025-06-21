@@ -137,22 +137,22 @@ export default function Home() {
                 <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
                     <div className="flex flex-col items-center gap-2">
                         <Briefcase className="w-10 h-10 text-primary" />
-                        <p className="text-3xl font-bold"><AnimatedCounter value={7} />+</p>
+                        <p className="text-3xl font-bold"><AnimatedCounter value={7} /></p>
                         <p className="text-muted-foreground">Projects</p>
                     </div>
                      <div className="flex flex-col items-center gap-2">
                         <Calendar className="w-10 h-10 text-primary" />
-                        <p className="text-3xl font-bold"><AnimatedCounter value={1} />+</p>
+                        <p className="text-3xl font-bold"><AnimatedCounter value={1} /></p>
                         <p className="text-muted-foreground">Years Experience</p>
                     </div>
                      <div className="flex flex-col items-center gap-2">
                         <Users className="w-10 h-10 text-primary" />
-                        <p className="text-3xl font-bold"><AnimatedCounter value={5} />+</p>
+                        <p className="text-3xl font-bold"><AnimatedCounter value={5} /></p>
                         <p className="text-muted-foreground">Happy Clients</p>
                     </div>
                      <div className="flex flex-col items-center gap-2">
                         <Star className="w-10 h-10 text-primary" />
-                        <p className="text-3xl font-bold"><AnimatedCounter value={5} />+</p>
+                        <p className="text-3xl font-bold"><AnimatedCounter value={5} /></p>
                         <p className="text-muted-foreground">Reviews</p>
                     </div>
                 </div>
@@ -161,14 +161,14 @@ export default function Home() {
       </section>
 
       {/* Skills & Timeline Section Wrapper */}
-      <div className="bg-slate-900 text-white py-20 -mx-4 px-4 sm:mx-0 sm:rounded-2xl">
+      <div className="py-20 -mx-4 px-4 sm:mx-0 sm:rounded-2xl dark:bg-slate-900 dark:text-white">
           <div className="container mx-auto">
             {/* Skills Section */}
             <section id="skills" className="mb-20">
               <h2 className="font-headline text-3xl md:text-4xl font-bold text-center mb-12 uppercase">My Skills</h2>
                <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-8 max-w-4xl mx-auto">
                 {skills.map((skill) => (
-                  <div key={skill.name} className="flex flex-col items-center justify-center gap-4 p-4 rounded-lg bg-slate-800 border border-slate-700 hover:border-accent-green-neon hover:-translate-y-1 transition-all duration-300">
+                  <div key={skill.name} className="flex flex-col items-center justify-center gap-4 p-4 rounded-lg bg-card dark:bg-slate-800 border border-border dark:border-slate-700 hover:border-accent-green-neon hover:-translate-y-1 transition-all duration-300">
                     <div className="text-accent-green-neon w-12 h-12">{skill.icon}</div>
                     <p className="font-semibold text-center">{skill.name}</p>
                   </div>
