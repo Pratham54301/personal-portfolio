@@ -87,10 +87,10 @@ export function ContactSocials() {
           rel="noopener noreferrer"
           aria-label={`Visit my ${social.label} profile`}
           className={cn(
-            "p-3 rounded-full transition-all duration-300",
+            "p-3 rounded-full transition-all duration-300 hover:scale-110",
             social.className
               ? social.className
-              : "bg-[#1f1f1f] text-primary-foreground hover:bg-accent"
+              : "bg-slate-50 text-primary hover:bg-accent hover:text-accent-foreground"
           )}
         >
           {social.icon}
