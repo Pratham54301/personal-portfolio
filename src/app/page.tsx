@@ -9,6 +9,7 @@ import { Timeline } from '@/components/timeline';
 import { ContactForm } from '@/components/contact-form';
 import { ContactSocials } from '@/components/contact-socials';
 import { BlogSection } from '@/components/blog-section';
+import { ContactDetails } from '@/components/contact-details';
 
 const skills = [
     { name: 'HTML5', icon: <Code className="w-full h-full" /> },
@@ -161,14 +162,14 @@ export default function Home() {
       </section>
 
       {/* Skills & Timeline Section Wrapper */}
-      <div className="py-20 -mx-4 px-4 sm:mx-0 sm:rounded-2xl dark:bg-slate-900">
+      <div className="py-20 -mx-4 px-4 sm:mx-0 sm:rounded-2xl dark:bg-slate-900/50">
           <div className="container mx-auto">
             {/* Skills Section */}
             <section id="skills" className="mb-20">
               <h2 className="font-headline text-3xl md:text-4xl font-bold text-center mb-12 uppercase">My Skills</h2>
                <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-8 max-w-4xl mx-auto">
                 {skills.map((skill) => (
-                  <div key={skill.name} className="flex flex-col items-center justify-center gap-4 p-4 rounded-lg bg-card dark:bg-slate-800 border border-border dark:border-slate-700 hover:border-accent-green-neon hover:-translate-y-1 transition-all duration-300">
+                  <div key={skill.name} className="flex flex-col items-center justify-center gap-4 p-4 rounded-lg bg-card/50 dark:bg-slate-800/50 border border-border/50 dark:border-slate-700/50 hover:border-accent-green-neon hover:-translate-y-1 transition-all duration-300">
                     <div className="text-accent-green-neon w-12 h-12">{skill.icon}</div>
                     <p className="font-semibold text-center">{skill.name}</p>
                   </div>
@@ -224,24 +225,11 @@ export default function Home() {
               Have a question or a project in mind? I'd love to hear from you. I'll get back to you within 24 hours.
             </p>
           </div>
-          <div className="grid md:grid-cols-3 gap-12">
-            <div className="md:col-span-1 space-y-6">
-                <div className="flex items-center gap-4">
-                    <Mail className="w-8 h-8 text-primary"/>
-                    <div>
-                        <h3 className="font-semibold text-lg">Email</h3>
-                        <p className="text-muted-foreground">prathams54301@gmail.com</p>
-                    </div>
-                </div>
-                 <div className="flex items-center gap-4">
-                    <Linkedin className="w-8 h-8 text-primary"/>
-                    <div>
-                        <h3 className="font-semibold text-lg">LinkedIn</h3>
-                        <p className="text-muted-foreground">pratham-s</p>
-                    </div>
-                </div>
+          <div className="grid md:grid-cols-1 lg:grid-cols-5 gap-12">
+            <div className="lg:col-span-2">
+              <ContactDetails />
             </div>
-            <div className="md:col-span-2">
+            <div className="lg:col-span-3">
               <ContactForm />
             </div>
           </div>
