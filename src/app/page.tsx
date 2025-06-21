@@ -8,6 +8,7 @@ import { AnimatedCounter } from '@/components/animated-counter';
 import { Timeline } from '@/components/timeline';
 import { ContactForm } from '@/components/contact-form';
 import { ContactSocials } from '@/components/contact-socials';
+import { BlogSection } from '@/components/blog-section';
 
 const skills = [
   { icon: <PenTool className="w-10 h-10 text-primary" />, title: 'Figma' },
@@ -163,6 +164,9 @@ export default function Home() {
             ))}
         </div>
       </section>
+
+      {/* Blogs Section */}
+      <BlogSection />
 
       {/* Contact Section */}
       <section id="contact" className="py-20">
