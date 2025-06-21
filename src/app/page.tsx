@@ -99,9 +99,12 @@ export default function Home() {
           <p className="text-lg md:text-xl text-muted-foreground max-w-xl">
             A passionate full-stack developer creating modern, responsive, and user-friendly web applications.
           </p>
-          <div className="flex justify-center md:justify-start gap-4">
+          <div className="flex flex-wrap justify-center md:justify-start items-center gap-4">
             <Button asChild size="lg">
               <Link href="/Pratham-Resume.pdf" target="_blank">Download CV <Download className="ml-2" /></Link>
+            </Button>
+            <Button asChild size="lg">
+              <Link href="https://forms.gle/7axq8mV9Y5T9YhmL8" target="_blank" rel="noopener noreferrer">Inquiry Now</Link>
             </Button>
             <div className="flex items-center gap-4">
                <Link href="#" aria-label="LinkedIn" className="text-foreground/80 hover:text-accent transition-colors"><Linkedin /></Link>

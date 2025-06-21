@@ -8,6 +8,7 @@ import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
 import { Label } from '@/components/ui/label';
+import Link from 'next/link';
 
 function SubmitButton() {
   const { pending } = useFormStatus();
@@ -94,7 +95,14 @@ export function ContactForm() {
           </ul>
         </div>
       )}
-      <SubmitButton />
+      <div className="flex flex-col sm:flex-row items-center gap-4">
+        <SubmitButton />
+        <Button asChild size="lg" className="w-full rounded-xl">
+          <Link href="https://forms.gle/7axq8mV9Y5T9YhmL8" target="_blank" rel="noopener noreferrer">
+            Inquiry Now
+          </Link>
+        </Button>
+      </div>
     </form>
   );
 }
