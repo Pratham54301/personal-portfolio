@@ -78,7 +78,7 @@ const socials: SocialLinkInfo[] = [
 
 export function ContactSocials() {
   return (
-    <div className="flex justify-center items-center gap-4 py-8">
+    <div className="flex justify-center gap-4 mt-8">
       {socials.map((social) => (
         <Link
           key={social.label}
@@ -90,7 +90,7 @@ export function ContactSocials() {
             "p-3 rounded-full transition-all duration-300",
             social.className
               ? social.className
-              : "bg-primary text-primary-foreground hover:bg-accent"
+              : "bg-[#1f1f1f] text-primary-foreground hover:bg-accent"
           )}
         >
           {social.icon}
