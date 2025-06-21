@@ -161,7 +161,7 @@ export default function Home() {
       </section>
 
       {/* Skills & Timeline Section Wrapper */}
-      <div className="py-20 -mx-4 px-4 sm:mx-0 sm:rounded-2xl dark:bg-slate-900 dark:text-white">
+      <div className="py-20 -mx-4 px-4 sm:mx-0 sm:rounded-2xl dark:bg-slate-900">
           <div className="container mx-auto">
             {/* Skills Section */}
             <section id="skills" className="mb-20">
