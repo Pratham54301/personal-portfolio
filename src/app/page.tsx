@@ -35,46 +35,57 @@ const projects = [
 const myTimelineItems = [
     {
         icon: <Briefcase />,
-        date: '2024 - Present',
+        date: 'August 2024 – Present',
         title: 'Frontend Developer',
-        subtitle: 'Some Company, Remote',
-        description: 'Developing and maintaining user-facing features using React.js and modern frontend technologies.'
+        subtitle: 'N R Crew Software Pvt. Ltd. | Ahmedabad',
+        description: [
+            'Built user-centric websites using HTML, CSS, JS',
+            'Introduced new tech and coding standards',
+            'Developed CMS and optimized code base'
+        ]
     },
     {
-        icon: <GraduationCap />,
-        date: '2021 - 2025',
-        title: 'B.Tech in Computer Science',
-        subtitle: 'ABC Institute of Technology',
-        description: 'Completed a comprehensive curriculum focused on software development, algorithms, and data structures.'
-    },
-     {
         icon: <Briefcase />,
-        date: '2023',
+        date: 'August 2024 – September 2024',
         title: 'Data Entry Operator',
-        subtitle: 'Freelance',
-        description: 'Managed and processed large volumes of data with high accuracy and efficiency.'
+        subtitle: 'Solaimalai Enterprises | Ahmedabad',
+        description: [
+            'Managed customer data and engaged effectively',
+            'Maintained database accuracy and performed routine maintenance'
+        ]
     },
     {
         icon: <Briefcase />,
-        date: '2022',
+        date: 'July 2023 – May 2024',
         title: 'Booking Executive',
-        subtitle: 'Local Travel Agency',
-        description: 'Handled customer inquiries and bookings, ensuring a smooth and pleasant travel experience.'
+        subtitle: 'Kabra Express Logistics Pvt. Ltd. | Ahmedabad',
+        description: [
+            'Built strong supplier relationships and optimized bookings',
+            'Maintained accurate records and handled client schedules',
+            'Developed strategies and managed client communication'
+        ]
     },
-     {
+    {
         icon: <GraduationCap />,
-        date: '2020 - 2021',
-        title: '12th Grade',
-        subtitle: 'XYZ Senior Secondary School',
-        description: 'Focused on science and mathematics, building a strong analytical foundation.'
+        date: '2023–Present',
+        title: 'B.Tech/B.E. in Computer Science',
+        subtitle: 'Silver Oak University | Gota | Ahmedabad',
+        description: 'Learning advanced programming, data structures, algorithms, and software development. Preparing for a successful career in software development.'
     },
-     {
+    {
         icon: <GraduationCap />,
-        date: '2018 - 2019',
-        title: '10th Grade',
-        subtitle: 'Devsaya International School',
-        description: 'Achieved high grades and developed a keen interest in technology and science.'
+        date: '2022–2023',
+        title: '12th – Shri R J Patel Shriji Vidyalaya',
+        subtitle: 'Bapunagar | Ahmedabad',
+        description: 'Completed 12th Science (A Group) from GSEB with a focus on Mathematics and Physics. Built strong analytical thinking and technical base.'
     },
+    {
+        icon: <GraduationCap />,
+        date: '2020–2021',
+        title: '10th – Devasya International School',
+        subtitle: 'Vastral | Ahmedabad',
+        description: 'I have completed my 10th from GSEB Board with good academic performance. This foundation helped me build strong basics in math, logic, and computer knowledge.'
+    }
 ];
 
 export default function Home() {

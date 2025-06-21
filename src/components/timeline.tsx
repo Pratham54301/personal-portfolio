@@ -7,7 +7,7 @@ type TimelineItemProps = {
   date: string;
   title: string;
   subtitle: string;
-  description: string;
+  description: string | string[];
 };
 
 type TimelineProps = {
@@ -40,7 +40,15 @@ export function Timeline({ items }: TimelineProps) {
                     <div className="font-semibold text-muted-foreground">{item.subtitle}</div>
                 </CardHeader>
                 <CardContent>
-                    <p className="text-sm text-muted-foreground">{item.description}</p>
+                    {Array.isArray(item.description) ? (
+                        <ul className="list-disc list-inside space-y-1 text-sm text-muted-foreground">
+                            {item.description.map((point, i) => (
+                                <li key={i}>{point}</li>
+                            ))}
+                        </ul>
+                    ) : (
+                        <p className="text-sm text-muted-foreground">{item.description}</p>
+                    )}
                 </CardContent>
              </Card>
           </div>
