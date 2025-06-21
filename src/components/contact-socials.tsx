@@ -90,7 +90,7 @@ export function ContactSocials() {
             "p-3 rounded-full transition-all duration-300 hover:scale-110",
             social.className
               ? social.className
-              : "bg-slate-50 text-primary hover:bg-accent hover:text-accent-foreground"
+              : "bg-slate-800 text-white hover:bg-accent hover:text-accent-foreground"
           )}
         >
           {social.icon}
