@@ -1,7 +1,16 @@
 import { Facebook, Twitter, Github, Instagram, Linkedin } from 'lucide-react';
 import Link from 'next/link';
+import { cn } from '@/lib/utils';
+import type { ReactNode } from 'react';
 
-const socials = [
+type SocialLinkInfo = {
+  href: string;
+  label: string;
+  icon: ReactNode;
+  className?: string;
+};
+
+const socials: SocialLinkInfo[] = [
   {
     href: 'https://facebook.com/yourprofile',
     label: 'Facebook',
@@ -23,7 +32,7 @@ const socials = [
     icon: <Instagram className="w-5 h-5" />,
   },
   {
-    href: 'https://www.behance.net/yourprofile',
+    href: 'https://behance.net/yourusername',
     label: 'Behance',
     icon: (
         <svg
@@ -34,9 +43,10 @@ const socials = [
             fill="currentColor"
             className="w-5 h-5"
         >
-            <path d="M14.125 14.053h-3.46v-3.46h3.46c.99 0 1.801.81 1.801 1.73s-.81 1.73-1.8 1.73zM22 6.5h-6c-1.104 0-2 .896-2 2v8c0 1.104.896 2 2 2h6v-2h-6v-2.5h4V12h-4V9.5h6V6.5zM14 6.5h-5v9h5c2.209 0 4-1.791 4-4s-1.791-5-4-5z"/>
+            <path d="M22.281 6.141h-6.561c-.551 0-.996.445-.996.996v8.728c0 .551.445.996.996.996h6.561v-2.188h-4.375v-1.875h3.75v-2.188h-3.75V8.328h4.375V6.14zm-9.375 8.953c-2.438 0-4.5-1.828-4.5-4.5s2.062-4.5 4.5-4.5c2.438 0 4.5 1.828 4.5 4.5s-2.062 4.5-4.5 4.5zm0-2.188c1.313 0 2.25-1.125 2.25-2.313s-.938-2.313-2.25-2.313-2.25 1.125-2.25 2.313.938 2.313 2.25 2.313zm-8.25-6.765H0v8.953h4.625c.602 0 1.055-.422 1.055-1.031.023-.65-.48-1.06-1.012-1.06H2.188V8.328h2.367c.563 0 .961-.398.961-.937s-.398-.938-.96-.938z"/>
         </svg>
     ),
+    className: 'bg-[#1769FF] text-white hover:bg-opacity-80 hover:scale-110 transform'
   },
   {
     href: 'https://linkedin.com/in/pratham-s',
@@ -71,7 +81,12 @@ export function ContactSocials() {
           target="_blank"
           rel="noopener noreferrer"
           aria-label={`Visit my ${social.label} profile`}
-          className="bg-primary text-primary-foreground p-3 rounded-full hover:bg-accent transition-colors duration-300"
+          className={cn(
+            "p-3 rounded-full transition-all duration-300",
+            social.className
+              ? social.className
+              : "bg-primary text-primary-foreground hover:bg-accent"
+          )}
         >
           {social.icon}
         </Link>
