@@ -58,12 +58,12 @@ export function ProjectsCarousel({ projects }: ProjectsCarouselProps) {
                   />
                   <div className="absolute inset-0 bg-black/50 flex items-center justify-center gap-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                     <Button asChild>
-                      <Link href={project.liveUrl} target="_blank">
+                      <Link href={project.liveUrl} target="_blank" rel="noopener noreferrer">
                         Live Demo
                       </Link>
                     </Button>
                     <Button asChild variant="secondary">
-                      <Link href={project.codeUrl} target="_blank">
+                      <Link href={project.codeUrl} target="_blank" rel="noopener noreferrer">
                         Source
                       </Link>
                     </Button>

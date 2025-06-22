@@ -9,7 +9,7 @@ import { ContactForm } from '@/components/contact-form';
 import { ContactSocials } from '@/components/contact-socials';
 import { BlogSection } from '@/components/blog-section';
 import { ContactDetails } from '@/components/contact-details';
-import { ProjectCard } from '@/components/project-card';
+import { ProjectsCarousel } from '@/components/projects-carousel';
 
 const skills = [
     { name: 'HTML5', icon: <Code className="w-full h-full" /> },
@@ -34,6 +34,12 @@ const projects = [
     { title: 'Portfolio Website Template', description: 'A sleek and modern portfolio template for creatives to showcase their work.', imageUrl: 'https://placehold.co/600x400.png', dataAiHint: 'portfolio website', liveUrl: '#', codeUrl: '#' },
     { title: 'Interactive Map Application', description: 'A custom map with interactive markers, layers, and data visualization features.', imageUrl: 'https://placehold.co/600x400.png', dataAiHint: 'interactive map', liveUrl: '#', codeUrl: '#' },
     { title: 'Online Learning Platform', description: 'An e-learning site offering courses on various subjects with video lectures and quizzes.', imageUrl: 'https://placehold.co/600x400.png', dataAiHint: 'online course', liveUrl: '#', codeUrl: '#' },
+    { title: 'Chat Application', description: 'A real-time chat application with private messaging and group chat features.', imageUrl: 'https://placehold.co/600x400.png', dataAiHint: 'chat application', liveUrl: '#', codeUrl: '#' },
+    { title: 'Music Streaming Service', description: 'A music streaming platform with a vast library of songs, playlists, and user profiles.', imageUrl: 'https://placehold.co/600x400.png', dataAiHint: 'music player', liveUrl: '#', codeUrl: '#' },
+    { title: 'Fitness Tracker', description: 'A mobile-friendly app to track workouts, set fitness goals, and monitor progress.', imageUrl: 'https://placehold.co/600x400.png', dataAiHint: 'fitness app', liveUrl: '#', codeUrl: '#' },
+    { title: 'Event Ticketing System', description: 'A platform for discovering, booking, and managing tickets for various events.', imageUrl: 'https://placehold.co/600x400.png', dataAiHint: 'event tickets', liveUrl: '#', codeUrl: '#' },
+    { title: 'AI-Powered Content Generator', description: 'A tool that uses AI to generate creative content like articles, summaries, and social media posts.', imageUrl: 'https://placehold.co/600x400.png', dataAiHint: 'ai generator', liveUrl: '#', codeUrl: '#' },
+    { title: 'Language Learning App', description: 'An interactive app for learning new languages with gamified lessons and exercises.', imageUrl: 'https://placehold.co/600x400.png', dataAiHint: 'language learning', liveUrl: '#', codeUrl: '#' },
 ];
 
 const myTimelineItems = [
@@ -209,11 +215,7 @@ export default function Home() {
       {/* Projects Section */}
       <section id="projects" className="py-20">
         <h2 className="font-headline text-3xl md:text-4xl font-bold text-center mb-12">Featured Projects</h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {projects.map((project) => (
-                <ProjectCard key={project.title} project={project} />
-            ))}
-        </div>
+        <ProjectsCarousel projects={projects} />
       </section>
 
       {/* Blogs Section */}
