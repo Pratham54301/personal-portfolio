@@ -125,17 +125,14 @@ export default function Home() {
                     <Image
                         src="/hero.jpg"
                         alt="Pratham S"
-                        width={400}
-                        height={560}
-                        className="w-full h-full object-cover"
-                        priority
+                        fill
+                        className="object-cover"
                     />
-                    
                 </div>
             </div>
         </div>
       </section>
-      
+     
       {/* About Section */}
       <section id="about" className="py-20">
          <div className="grid md:grid-cols-3 gap-12 items-center">
