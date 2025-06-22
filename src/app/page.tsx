@@ -119,6 +119,7 @@ export default function Home() {
             </div>
           </div>
         </div>
+       
         <div className="flex-shrink-0 flex justify-center">
             <div className="relative group w-[280px] h-[400px] lg:w-[320px] lg:h-[450px]">
                 <div className="absolute w-full h-full rounded-xl overflow-hidden shadow-xl transition-all duration-300 ease-in-out group-hover:scale-105 group-hover:shadow-2xl">
@@ -131,6 +132,7 @@ export default function Home() {
                 </div>
             </div>
         </div>
+ 
       </section>
      
       {/* About Section */}
