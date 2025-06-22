@@ -1,9 +1,10 @@
 
 
+
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
-import { Briefcase, Calendar, Code, Download, Github, GraduationCap, Instagram, Linkedin, PenTool, Star, Twitter, Users, Atom, Cloud, Palette } from 'lucide-react';
+import { Briefcase, Calendar, Code, Download, Github, GraduationCap, Instagram, Linkedin, PenTool, Star, Twitter, Users, Atom, Cloud, Palette, Facebook } from 'lucide-react';
 import Image from 'next/image';
 import Link from 'next/link';
 import { AnimatedCounter } from '@/components/animated-counter';
@@ -92,8 +93,8 @@ export default function Home() {
   return (
     <div className="container mx-auto px-4">
       {/* Hero Section */}
-      <section id="home" className="min-h-[calc(100vh-5rem)] flex flex-col-reverse md:flex-row items-center justify-center gap-12 text-center md:text-left py-20">
-        <div className="space-y-6">
+      <section id="home" className="min-h-[calc(100vh-5rem)] flex flex-col-reverse md:flex-row items-center justify-center gap-12 py-20">
+        <div className="flex flex-col items-center md:items-start text-center md:text-left space-y-6">
           <h1 className="font-headline text-4xl md:text-6xl font-bold tracking-tight">
             <span className="block">Hi, I&apos;m</span>
             <span className="text-primary">Pratham S</span>
@@ -102,7 +103,7 @@ export default function Home() {
             A passionate Frontend developer creating modern, responsive, and user-friendly web applications.
           </p>
           <div className="flex flex-col items-center md:items-start gap-6">
-            <div className="flex flex-wrap justify-center md:justify-start gap-4">
+            <div className="flex flex-wrap justify-center gap-4">
               <Button asChild size="lg">
                 <Link href="/prathamkumar-resume.pdf" target="_blank">Download CV <Download className="ml-2" /></Link>
               </Button>
@@ -110,11 +111,12 @@ export default function Home() {
                 <Link href="https://forms.gle/7axq8mV9Y5T9YhmL8" target="_blank" rel="noopener noreferrer">Inquiry Now</Link>
               </Button>
             </div>
-            <div className="flex items-center gap-4">
+            <div className="flex justify-center md:justify-start gap-4 mt-6">
                <Link href="#" aria-label="LinkedIn" className="bg-primary text-primary-foreground p-3 rounded-full inline-flex items-center justify-center hover:bg-accent transition-colors"><Linkedin /></Link>
                <Link href="#" aria-label="GitHub" className="bg-primary text-primary-foreground p-3 rounded-full inline-flex items-center justify-center hover:bg-accent transition-colors"><Github /></Link>
                <Link href="#" aria-label="Twitter" className="bg-primary text-primary-foreground p-3 rounded-full inline-flex items-center justify-center hover:bg-accent transition-colors"><Twitter /></Link>
                <Link href="#" aria-label="Instagram" className="bg-primary text-primary-foreground p-3 rounded-full inline-flex items-center justify-center hover:bg-accent transition-colors"><Instagram /></Link>
+               <Link href="#" aria-label="Facebook" className="bg-primary text-primary-foreground p-3 rounded-full inline-flex items-center justify-center hover:bg-accent transition-colors"><Facebook /></Link>
             </div>
           </div>
         </div>
