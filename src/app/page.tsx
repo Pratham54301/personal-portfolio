@@ -125,34 +125,30 @@ export default function Home() {
           </div>
         </div>
        
-        <div className="flex-shrink-0 flex justify-center">
-            <div className="relative group w-[280px] h-[400px] lg:w-[320px] lg:h-[450px]">
-                <div className="absolute w-full h-full rounded-xl overflow-hidden shadow-xl transition-all duration-300 ease-in-out group-hover:scale-105 group-hover:shadow-2xl">
-                    <Image
-                        src="/hero.jpg"
-                        alt="Pratham S"
-                        fill
-                        className="rounded-xl object-cover shadow-xl"
-                        sizes="(max-width: 768px) 100vw, 33vw"
-                        priority
-                    />
-                </div>
+        <div className="md:col-span-1 flex justify-center">
+            <Image
+  src="/hero.jpg"
+  alt="About Pratham"
+  width={400}
+  height={500}
+  className="rounded-xl shadow-lg transition-transform duration-300 hover:scale-105"
+/>
+
             </div>
-        </div>
- 
       </section>
      
       {/* About Section */}
       <section id="about" className="py-20">
          <div className="grid md:grid-cols-3 gap-12 items-center">
             <div className="md:col-span-1 flex justify-center">
-                <Image
-                    src="/about.JPG"
-                    alt="About Pratham"
-                    width={400}
-                    height={500}
-                    className="rounded-xl shadow-lg transition-transform duration-300 hover:scale-105"
-                />
+            <Image
+  src="/about.JPG"
+  alt="About Pratham"
+  width={400}
+  height={500}
+  className="rounded-xl shadow-lg transition-transform duration-300 hover:scale-105"
+/>
+
             </div>
             <div className="md:col-span-2 space-y-6">
                 <h2 className="font-headline text-3xl md:text-4xl font-bold">About Me</h2>
