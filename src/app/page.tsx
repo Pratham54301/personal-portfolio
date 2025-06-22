@@ -1,6 +1,4 @@
 
-
-
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
@@ -88,6 +86,7 @@ const myTimelineItems = [
         description: 'I have completed my 10th from GSEB Board with good academic performance. This foundation helped me build strong basics in math, logic, and computer knowledge.'
     }
 ];
+
 
 export default function Home() {
   return (
