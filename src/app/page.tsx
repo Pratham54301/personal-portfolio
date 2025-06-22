@@ -1,6 +1,4 @@
-
 import { Button } from '@/components/ui/button';
-import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { Briefcase, Calendar, Code, Download, Github, GraduationCap, Instagram, Linkedin, PenTool, Star, Twitter, Users, Atom, Cloud, Palette, Facebook } from 'lucide-react';
 import Image from 'next/image';
@@ -11,6 +9,7 @@ import { ContactForm } from '@/components/contact-form';
 import { ContactSocials } from '@/components/contact-socials';
 import { BlogSection } from '@/components/blog-section';
 import { ContactDetails } from '@/components/contact-details';
+import { ProjectsCarousel } from '@/components/projects-carousel';
 
 const skills = [
     { name: 'HTML5', icon: <Code className="w-full h-full" /> },
@@ -29,6 +28,12 @@ const projects = [
     { title: 'E-commerce Platform', description: 'A full-featured online store with product listings, a shopping cart, and a secure checkout process.', imageUrl: 'https://placehold.co/600x400.png', dataAiHint: 'e-commerce website', liveUrl: '#', codeUrl: '#' },
     { title: 'Task Management App', description: 'A collaborative tool for teams to organize tasks, set deadlines, and track progress with an intuitive interface.', imageUrl: 'https://placehold.co/600x400.png', dataAiHint: 'task manager', liveUrl: '#', codeUrl: '#' },
     { title: 'Data Visualization Dashboard', description: 'An analytics dashboard that presents complex data sets through interactive charts and graphs.', imageUrl: 'https://placehold.co/600x400.png', dataAiHint: 'analytics dashboard', liveUrl: '#', codeUrl: '#' },
+    { title: 'Social Media Feed', description: 'A dynamic feed that displays posts from various social media platforms in real-time.', imageUrl: 'https://placehold.co/600x400.png', dataAiHint: 'social media', liveUrl: '#', codeUrl: '#' },
+    { title: 'Weather Forecast App', description: 'Get accurate, up-to-date weather forecasts for any location with a clean and simple UI.', imageUrl: 'https://placehold.co/600x400.png', dataAiHint: 'weather app', liveUrl: '#', codeUrl: '#' },
+    { title: 'Recipe Finder', description: 'Search for recipes based on ingredients you have at home, with step-by-step instructions.', imageUrl: 'https://placehold.co/600x400.png', dataAiHint: 'recipe book', liveUrl: '#', codeUrl: '#' },
+    { title: 'Portfolio Website Template', description: 'A sleek and modern portfolio template for creatives to showcase their work.', imageUrl: 'https://placehold.co/600x400.png', dataAiHint: 'portfolio website', liveUrl: '#', codeUrl: '#' },
+    { title: 'Interactive Map Application', description: 'A custom map with interactive markers, layers, and data visualization features.', imageUrl: 'https://placehold.co/600x400.png', dataAiHint: 'interactive map', liveUrl: '#', codeUrl: '#' },
+    { title: 'Online Learning Platform', description: 'An e-learning site offering courses on various subjects with video lectures and quizzes.', imageUrl: 'https://placehold.co/600x400.png', dataAiHint: 'online course', liveUrl: '#', codeUrl: '#' },
 ];
 
 const myTimelineItems = [
@@ -126,8 +131,9 @@ export default function Home() {
                     <Image
                         src="/hero.jpg"
                         alt="Pratham S"
-                        fill
-                        className="object-cover"
+                        layout="fill"
+                        objectFit="cover"
+                        className="rounded-xl"
                     />
                 </div>
             </div>
@@ -139,7 +145,13 @@ export default function Home() {
       <section id="about" className="py-20">
          <div className="grid md:grid-cols-3 gap-12 items-center">
             <div className="md:col-span-1 flex justify-center">
-                <Image src="/about.JPG" alt="About Pratham S" width={400} height={500} className="rounded-lg shadow-lg" />
+                <Image
+                    src="/about.JPG"
+                    alt="About Pratham"
+                    width={400}
+                    height={500}
+                    className="rounded-xl shadow-lg transition-transform duration-300 hover:scale-105"
+                />
             </div>
             <div className="md:col-span-2 space-y-6">
                 <h2 className="font-headline text-3xl md:text-4xl font-bold">About Me</h2>
@@ -200,29 +212,7 @@ export default function Home() {
       {/* Projects Section */}
       <section id="projects" className="py-20">
         <h2 className="font-headline text-3xl md:text-4xl font-bold text-center mb-12">Featured Projects</h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {projects.map((project) => (
-                <Card key={project.title} className="overflow-hidden group transition-all duration-300 hover:shadow-xl hover:-translate-y-2 hover:border-accent">
-                    <div className="relative">
-                        <Image src={project.imageUrl} alt={project.title} width={600} height={400} className="w-full h-auto object-cover transition-transform duration-300" data-ai-hint={project.dataAiHint} />
-                        <div className="absolute inset-0 bg-black/50 flex items-center justify-center gap-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                             <Button asChild>
-                                <Link href={project.liveUrl} target="_blank">Live Demo</Link>
-                            </Button>
-                             <Button asChild variant="secondary">
-                                <Link href={project.codeUrl} target="_blank">Source</Link>
-                            </Button>
-                        </div>
-                    </div>
-                    <CardHeader>
-                        <CardTitle className="font-headline text-primary">{project.title}</CardTitle>
-                    </CardHeader>
-                    <CardContent>
-                        <p className="text-muted-foreground">{project.description}</p>
-                    </CardContent>
-                </Card>
-            ))}
-        </div>
+        <ProjectsCarousel projects={projects} />
       </section>
 
       {/* Blogs Section */}
