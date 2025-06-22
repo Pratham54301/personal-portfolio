@@ -9,7 +9,7 @@ import { ContactForm } from '@/components/contact-form';
 import { ContactSocials } from '@/components/contact-socials';
 import { BlogSection } from '@/components/blog-section';
 import { ContactDetails } from '@/components/contact-details';
-import { ProjectsCarousel } from '@/components/projects-carousel';
+import { ProjectCard } from '@/components/project-card';
 
 const skills = [
     { name: 'HTML5', icon: <Code className="w-full h-full" /> },
@@ -212,7 +212,11 @@ export default function Home() {
       {/* Projects Section */}
       <section id="projects" className="py-20">
         <h2 className="font-headline text-3xl md:text-4xl font-bold text-center mb-12">Featured Projects</h2>
-        <ProjectsCarousel projects={projects} />
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {projects.map((project) => (
+                <ProjectCard key={project.title} project={project} />
+            ))}
+        </div>
       </section>
 
       {/* Blogs Section */}
