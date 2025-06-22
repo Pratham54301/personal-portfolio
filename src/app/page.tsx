@@ -131,9 +131,10 @@ export default function Home() {
                     <Image
                         src="/hero.jpg"
                         alt="Pratham S"
-                        layout="fill"
-                        objectFit="cover"
-                        className="rounded-xl"
+                        fill
+                        className="rounded-xl object-cover shadow-xl"
+                        sizes="(max-width: 768px) 100vw, 33vw"
+                        priority
                     />
                 </div>
             </div>
