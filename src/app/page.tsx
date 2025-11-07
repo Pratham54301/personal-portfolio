@@ -148,7 +148,7 @@ export default function Home() {
 
   <div className="md:col-span-1 flex justify-center">
     <Image
-      src="https://picsum.photos/seed/hero/400/500"
+      src="https://picsum.photos/seed/hero-image/400/500"
       alt="Pratham S"
       width={400}
       height={500}
@@ -163,12 +163,12 @@ export default function Home() {
          <div className="grid md:grid-cols-3 gap-12 items-center">
             <div className="md:col-span-1 flex justify-center">
             <Image
-              src="https://picsum.photos/seed/about/400/500"
+              src="https://picsum.photos/seed/about-image/400/500"
               alt="About Pratham"
               width={400}
               height={500}
               className="rounded-xl shadow-lg transition-transform duration-300 hover:scale-105"
-              data-ai-hint="workspace desk"
+              data-ai-hint="person working"
             />
             </div>
             <div className="md:col-span-2 space-y-6">
