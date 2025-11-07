@@ -1,7 +1,7 @@
 import { Button } from '@/components/ui/button';
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { Briefcase, Calendar, Code, Download, Github, GraduationCap, Instagram, Linkedin, PenTool, Star, Twitter, Users, Atom, Cloud, Palette, Facebook } from 'lucide-react';
-import Image from 'next/image';
+import Image from "next/image";
 import Link from 'next/link';
 import { AnimatedCounter } from '@/components/animated-counter';
 import { Timeline } from '@/components/timeline';
@@ -258,5 +258,3 @@ export default function Home() {
     </div>
   )
 }
-
-    
