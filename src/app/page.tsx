@@ -41,11 +41,6 @@ const projects = [
     { title: 'Event Ticketing System', description: 'A platform for discovering, booking, and managing tickets for various events.', imageUrl: 'https://picsum.photos/seed/ticketing-app/600/400', dataAiHint: 'event tickets', liveUrl: '#', codeUrl: '#' },
     { title: 'AI-Powered Content Generator', description: 'A tool that uses AI to generate creative content like articles, summaries, and social media posts.', imageUrl: 'https://picsum.photos/seed/ai-generator/600/400', dataAiHint: 'ai generator', liveUrl: '#', codeUrl: '#' },
     { title: 'Language Learning App', description: 'An interactive app for learning new languages with gamified lessons and exercises.', imageUrl: 'https://picsum.photos/seed/language-app/600/400', dataAiHint: 'language learning', liveUrl: '#', codeUrl: '#' },
-    { title: 'Project Management Tool', description: 'A comprehensive tool for managing complex projects with Kanban boards and Gantt charts.', imageUrl: 'https://picsum.photos/seed/project-management/600/400', dataAiHint: 'project management', liveUrl: '#', codeUrl: '#' },
-    { title: 'Real Estate Listing Platform', description: 'A platform for browsing, buying, and selling real estate properties.', imageUrl: 'https://picsum.photos/seed/real-estate/600/400', dataAiHint: 'real estate', liveUrl: '#', codeUrl: '#' },
-    { title: 'Restaurant Reservation System', description: 'Book tables at your favorite restaurants with a seamless and intuitive interface.', imageUrl: 'https://picsum.photos/seed/restaurant-booking/600/400', dataAiHint: 'restaurant booking', liveUrl: '#', codeUrl: '#' },
-    { title: 'Travel Planning App', description: 'Plan your next vacation with detailed itineraries, booking options, and travel guides.', imageUrl: 'https://picsum.photos/seed/travel-app/600/400', dataAiHint: 'travel planning', liveUrl: '#', codeUrl: '#' },
-    { title: 'Job Board Application', description: 'Find your dream job with an advanced job board featuring powerful search and filtering.', imageUrl: 'https://picsum.photos/seed/job-board/600/400', dataAiHint: 'job board', liveUrl: '#', codeUrl: '#' },
 ];
 
 const myTimelineItems = [
@@ -153,11 +148,12 @@ export default function Home() {
 
   <div className="md:col-span-1 flex justify-center">
     <Image
-      src="/hero.jpg"
+      src="https://picsum.photos/seed/hero/400/500"
       alt="Pratham S"
       width={400}
       height={500}
       className="rounded-xl object-cover shadow-lg"
+      data-ai-hint="developer portrait"
     />
   </div>
 </section>
@@ -167,11 +163,12 @@ export default function Home() {
          <div className="grid md:grid-cols-3 gap-12 items-center">
             <div className="md:col-span-1 flex justify-center">
             <Image
-              src="/about.JPG"
+              src="https://picsum.photos/seed/about/400/500"
               alt="About Pratham"
               width={400}
               height={500}
               className="rounded-xl shadow-lg transition-transform duration-300 hover:scale-105"
+              data-ai-hint="workspace desk"
             />
             </div>
             <div className="md:col-span-2 space-y-6">
