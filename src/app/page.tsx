@@ -2,6 +2,9 @@ import { Button } from '@/components/ui/button';
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { Briefcase, Calendar, Code, Download, Github, GraduationCap, Instagram, Linkedin, PenTool, Star, Twitter, Users, Atom, Cloud, Palette, Facebook, ExternalLink } from 'lucide-react';
 import Image from 'next/image';
+
+import Hero from '@/Public/hero01.jpg';
+import About from '@/Public/about01.jpg';
 import Link from 'next/link';
 import { AnimatedCounter } from '@/components/animated-counter';
 import { Timeline } from '@/components/timeline';
@@ -124,7 +127,7 @@ export default function Home() {
        
         <div className="md:col-span-1 flex justify-center">
             <Image
-              src="/hero.jpg"
+              src={Hero}
               alt="Pratham S"
               width={400}
               height={500}
@@ -139,7 +142,7 @@ export default function Home() {
          <div className="grid md:grid-cols-3 gap-12 items-center">
             <div className="md:col-span-1 flex justify-center">
             <Image
-              src="/about01.jpg"
+              src={About}
               alt="About Pratham"
               width={400}
               height={500}
