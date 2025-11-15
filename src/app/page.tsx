@@ -25,12 +25,12 @@ const skills = [
 ];
 
 const projects = [
-    { title: 'E-commerce Platform', description: 'A full-featured online store with product listings, a shopping cart, and a secure checkout process.', imageUrl: '/images/project-ecommerce.jpg', dataAiHint: 'e-commerce website', liveUrl: '#', codeUrl: '#' },
-    { title: 'Task Management App', description: 'A collaborative tool for teams to organize tasks, set deadlines, and track progress with an intuitive interface.', imageUrl: '/images/project-task-manager.jpg', dataAiHint: 'task manager', liveUrl: '#', codeUrl: '#' },
-    { title: 'Data Visualization Dashboard', description: 'An analytics dashboard that presents complex data sets through interactive charts and graphs.', imageUrl: '/images/project-dashboard.jpg', dataAiHint: 'analytics dashboard', liveUrl: '#', codeUrl: '#' },
-    { title: 'Social Media Feed', description: 'A dynamic feed that displays posts from various social media platforms in real-time.', imageUrl: '/images/project-social-feed.jpg', dataAiHint: 'social media', liveUrl: '#', codeUrl: '#' },
-    { title: 'Weather Forecast App', description: 'Get accurate, up-to-date weather forecasts for any location with a clean and simple UI.', imageUrl: '/images/project-weather-app.jpg', dataAiHint: 'weather app', liveUrl: '#', codeUrl: '#' },
-    { title: 'Recipe Finder', description: 'Search for recipes based on ingredients you have at home, with step-by-step instructions.', imageUrl: '/images/project-recipe-finder.jpg', dataAiHint: 'recipe book', liveUrl: '#', codeUrl: '#' },
+    { title: 'E-commerce Platform', description: 'A full-featured online store with product listings, a shopping cart, and a secure checkout process.', imageUrl: '/project-ecommerce.jpg', dataAiHint: 'e-commerce website', liveUrl: '#', codeUrl: '#' },
+    { title: 'Task Management App', description: 'A collaborative tool for teams to organize tasks, set deadlines, and track progress with an intuitive interface.', imageUrl: '/project-task-manager.jpg', dataAiHint: 'task manager', liveUrl: '#', codeUrl: '#' },
+    { title: 'Data Visualization Dashboard', description: 'An analytics dashboard that presents complex data sets through interactive charts and graphs.', imageUrl: '/project-dashboard.jpg', dataAiHint: 'analytics dashboard', liveUrl: '#', codeUrl: '#' },
+    { title: 'Social Media Feed', description: 'A dynamic feed that displays posts from various social media platforms in real-time.', imageUrl: '/project-social-feed.jpg', dataAiHint: 'social media', liveUrl: '#', codeUrl: '#' },
+    { title: 'Weather Forecast App', description: 'Get accurate, up-to-date weather forecasts for any location with a clean and simple UI.', imageUrl: '/project-weather-app.jpg', dataAiHint: 'weather app', liveUrl: '#', codeUrl: '#' },
+    { title: 'Recipe Finder', description: 'Search for recipes based on ingredients you have at home, with step-by-step instructions.', imageUrl: '/project-recipe-finder.jpg', dataAiHint: 'recipe book', liveUrl: '#', codeUrl: '#' },
 ];
 
 const myTimelineItems = [
@@ -124,7 +124,7 @@ export default function Home() {
        
         <div className="md:col-span-1 flex justify-center">
             <Image
-              src="/images/hero.jpg"
+              src="/hero.jpg"
               alt="Pratham S"
               width={400}
               height={500}
@@ -139,7 +139,7 @@ export default function Home() {
          <div className="grid md:grid-cols-3 gap-12 items-center">
             <div className="md:col-span-1 flex justify-center">
             <Image
-              src="/images/about.jpg"
+              src="/about.jpg"
               alt="About Pratham"
               width={400}
               height={500}
