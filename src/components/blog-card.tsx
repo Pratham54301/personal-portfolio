@@ -35,7 +35,7 @@ export function BlogCard({ category, title, date, summary, authorName, authorImg
   const style = categoryStyles[category];
 
   return (
-    <Card className="flex h-full min-w-[350px] max-w-[350px] flex-col justify-between rounded-xl border-2 border-transparent bg-card transition-all hover:border-primary">
+    <Card className="card-glass card-glass-hover flex h-full min-w-[350px] max-w-[350px] flex-col justify-between">
       <CardHeader>
         <div className="flex items-center justify-between">
           <span className="text-sm text-muted-foreground">{date}</span>

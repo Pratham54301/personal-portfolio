@@ -179,14 +179,14 @@ export default function Home() {
       </section>
 
       {/* Skills & Timeline Section Wrapper */}
-      <div className="py-20 -mx-4 px-4 sm:mx-0 sm:rounded-2xl dark:bg-card/50">
+      <div className="py-20">
           <div className="container mx-auto">
             {/* Skills Section */}
             <section id="skills" className="mb-20">
               <h2 className="font-headline text-3xl md:text-4xl font-bold text-center mb-12 uppercase">My Skills</h2>
                <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-8 max-w-4xl mx-auto">
                 {skills.map((skill) => (
-                  <div key={skill.name} className="flex flex-col items-center justify-center gap-4 p-4 rounded-lg bg-card/50 dark:bg-slate-800/50 border border-border/50 dark:border-slate-700/50 hover:border-primary hover:-translate-y-1 transition-all duration-300">
+                  <div key={skill.name} className="flex flex-col items-center justify-center gap-4 p-4 card-glass card-glass-hover">
                     <div className="text-brand-violet w-12 h-12">{skill.icon}</div>
                     <p className="font-semibold text-center text-brand-white">{skill.name}</p>
                   </div>
@@ -221,10 +221,10 @@ export default function Home() {
             </p>
           </div>
           <div className="grid md:grid-cols-1 lg:grid-cols-5 gap-12">
-            <div className="lg:col-span-2">
+            <div className="lg:col-span-2 card-glass p-8">
               <ContactDetails />
             </div>
-            <div className="lg:col-span-3">
+            <div className="lg:col-span-3 card-glass p-8">
               <ContactForm />
             </div>
           </div>

@@ -46,7 +46,7 @@ export function ProjectsCarousel({ projects }: ProjectsCarouselProps) {
         {projects.map((project, index) => (
           <CarouselItem key={index} className="md:basis-1/2 lg:basis-1/3">
             <div className="p-1 h-full">
-              <Card className="overflow-hidden group transition-all duration-300 hover:shadow-xl hover:-translate-y-2 hover:border-accent flex flex-col h-full">
+              <Card className="card-glass card-glass-hover group overflow-hidden flex flex-col h-full">
                 <div className="relative">
                   <Image
                     src={project.imageUrl}
