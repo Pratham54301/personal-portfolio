@@ -1,6 +1,7 @@
 'use client';
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 import { usePathname } from 'next/navigation';
 import { motion, AnimatePresence } from 'framer-motion';
 import { ThemeToggle } from './theme-toggle';
@@ -67,8 +68,8 @@ export function Navbar() {
       )}
     >
       <div className="container mx-auto flex items-center justify-between px-4">
-        <Link href="/#home" className="font-headline text-2xl font-bold text-primary">
-          Pratham
+        <Link href="/#home">
+           <Image src="/logo final.png" alt="PortfolioFlow Logo" width={140} height={40} priority />
         </Link>
         <nav className="hidden md:flex items-center gap-6">
           {navLinks.map(({ href, label, sectionId }) => (
