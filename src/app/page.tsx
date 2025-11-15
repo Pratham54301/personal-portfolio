@@ -94,30 +94,30 @@ export default function Home() {
   return (
     <div className="container mx-auto px-4">
       {/* Hero Section */}
-      <section id="home" className="min-h-[calc(100vh-5rem)] flex flex-col-reverse md:flex-row items-center justify-center gap-12 py-20">
+      <section id="home" className="min-h-[calc(100vh-5rem)] flex flex-col-reverse md:flex-row items-center justify-center gap-12 py-20 bg-gradient-to-br from-[#5A2CA0] via-[#7B3EC8] to-[#FF7A3E]">
         <div className="flex flex-col items-center md:items-start text-center md:text-left space-y-6">
           <h1 className="font-headline text-4xl md:text-6xl font-bold tracking-tight">
-            <span className="block">Hi, I&apos;m</span>
-            <span className="text-primary">Pratham S</span>
+            <span className="block text-white">Hi, I&apos;m</span>
+            <span className="text-white drop-shadow-[0_1.2px_1.2px_rgba(0,0,0,0.8)]">Pratham S</span>
           </h1>
-          <p className="text-lg md:text-xl text-muted-foreground max-w-xl">
+          <p className="text-lg md:text-xl text-gray-200 max-w-xl">
             A passionate Frontend developer creating modern, responsive, and user-friendly web applications.
           </p>
           <div className="flex flex-col items-center md:items-start gap-6">
             <div className="flex flex-wrap justify-center gap-4">
-              <Button asChild size="lg">
+              <Button asChild size="lg" className="bg-white/90 text-primary hover:bg-white">
                 <Link href="/prathamkumar-resume.pdf" target="_blank">Download CV <Download className="ml-2" /></Link>
               </Button>
-              <Button asChild size="lg">
+              <Button asChild size="lg" variant="outline" className="bg-transparent text-white border-white hover:bg-white hover:text-primary">
                 <Link href="https://forms.gle/7axq8mV9Y5T9YhmL8" target="_blank" rel="noopener noreferrer">Inquiry Now</Link>
               </Button>
             </div>
             <div className="flex justify-center md:justify-start gap-4 mt-6">
-               <Link href="#" aria-label="LinkedIn" className="bg-primary text-primary-foreground p-3 rounded-full inline-flex items-center justify-center hover:bg-accent transition-colors"><Linkedin /></Link>
-               <Link href="#" aria-label="GitHub" className="bg-primary text-primary-foreground p-3 rounded-full inline-flex items-center justify-center hover:bg-accent transition-colors"><Github /></Link>
-               <Link href="#" aria-label="Twitter" className="bg-primary text-primary-foreground p-3 rounded-full inline-flex items-center justify-center hover:bg-accent transition-colors"><Twitter /></Link>
-               <Link href="#" aria-label="Instagram" className="bg-primary text-primary-foreground p-3 rounded-full inline-flex items-center justify-center hover:bg-accent transition-colors"><Instagram /></Link>
-               <Link href="#" aria-label="Facebook" className="bg-primary text-primary-foreground p-3 rounded-full inline-flex items-center justify-center hover:bg-accent transition-colors"><Facebook /></Link>
+               <Link href="#" aria-label="LinkedIn" className="bg-white/20 text-white p-3 rounded-full inline-flex items-center justify-center hover:bg-white hover:text-primary transition-colors"><Linkedin /></Link>
+               <Link href="#" aria-label="GitHub" className="bg-white/20 text-white p-3 rounded-full inline-flex items-center justify-center hover:bg-white hover:text-primary transition-colors"><Github /></Link>
+               <Link href="#" aria-label="Twitter" className="bg-white/20 text-white p-3 rounded-full inline-flex items-center justify-center hover:bg-white hover:text-primary transition-colors"><Twitter /></Link>
+               <Link href="#" aria-label="Instagram" className="bg-white/20 text-white p-3 rounded-full inline-flex items-center justify-center hover:bg-white hover:text-primary transition-colors"><Instagram /></Link>
+               <Link href="#" aria-label="Facebook" className="bg-white/20 text-white p-3 rounded-full inline-flex items-center justify-center hover:bg-white hover:text-primary transition-colors"><Facebook /></Link>
             </div>
           </div>
         </div>
@@ -233,3 +233,5 @@ export default function Home() {
     </div>
   )
 }
+
+    
