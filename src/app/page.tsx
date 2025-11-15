@@ -134,7 +134,7 @@ export default function Home() {
         <div className="md:col-span-1 flex justify-center">
             <Image
   src="/hero.jpg"
-  alt="About Pratham"
+  alt="Pratham S"
   width={400}
   height={500}
   className="rounded-xl shadow-lg transition-transform duration-300 hover:scale-105"
@@ -148,7 +148,7 @@ export default function Home() {
          <div className="grid md:grid-cols-3 gap-12 items-center">
             <div className="md:col-span-1 flex justify-center">
             <Image
-  src="/about.JPG"
+  src="/about.jpg"
   alt="About Pratham"
   width={400}
   height={500}
