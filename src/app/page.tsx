@@ -11,7 +11,6 @@ import { BlogSection } from '@/components/blog-section';
 import { ContactDetails } from '@/components/contact-details';
 import { ProjectsCarousel } from '@/components/projects-carousel';
 
-
 const skills = [
     { name: 'HTML5', icon: <Code className="w-full h-full" /> },
     { name: 'CSS3', icon: <Palette className="w-full h-full" /> },
