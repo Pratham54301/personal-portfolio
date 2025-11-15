@@ -67,7 +67,7 @@
     scroll-padding-top: 5rem; /* Offset for sticky nav */
   }
   body {
-    @apply bg-gradient-to-br from-brand-purple via-brand-violet to-brand-orange text-brand-light-gray leading-relaxed;
+    @apply bg-gradient-to-br from-[#5A2CA0] to-[#FF7A3E] text-brand-light-gray leading-relaxed;
     line-height: 1.7;
   }
   h1, h2, h3, h4, h5, h6 {
