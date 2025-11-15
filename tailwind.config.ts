@@ -23,6 +23,11 @@ export default {
         code: ['monospace'],
       },
       colors: {
+        'brand-purple': '#5A2CA0',
+        'brand-violet': '#C8A2FF',
+        'brand-orange': '#FF7A3E',
+        'brand-white': '#FFFFFF',
+        'brand-light-gray': '#D1D5DB',
         'accent-green': '#24AB63',
         'accent-green-neon': '#00FF9D',
         'css-pink': '#FF4081',

@@ -25,12 +25,12 @@ const skills = [
 ];
 
 const projects = [
-    { title: 'E-commerce Platform', description: 'A full-featured online store with product listings, a shopping cart, and a secure checkout process.', imageUrl: '/project-1.jpg', dataAiHint: 'e-commerce website', liveUrl: '#', codeUrl: '#' },
-    { title: 'Task Management App', description: 'A collaborative tool for teams to organize tasks, set deadlines, and track progress with an intuitive interface.', imageUrl: '/project-2.jpg', dataAiHint: 'task manager', liveUrl: '#', codeUrl: '#' },
-    { title: 'Data Visualization Dashboard', description: 'An analytics dashboard that presents complex data sets through interactive charts and graphs.', imageUrl: '/project-3.jpg', dataAiHint: 'analytics dashboard', liveUrl: '#', codeUrl: '#' },
-    { title: 'Social Media Feed', description: 'A dynamic feed that displays posts from various social media platforms in real-time.', imageUrl: '/project-4.jpg', dataAiHint: 'social media', liveUrl: '#', codeUrl: '#' },
-    { title: 'Weather Forecast App', description: 'Get accurate, up-to-date weather forecasts for any location with a clean and simple UI.', imageUrl: '/project-5.jpg', dataAiHint: 'weather app', liveUrl: '#', codeUrl: '#' },
-    { title: 'Recipe Finder', description: 'Search for recipes based on ingredients you have at home, with step-by-step instructions.', imageUrl: '/project-6.jpg', dataAiHint: 'recipe book', liveUrl: '#', codeUrl: '#' },
+    { title: 'E-commerce Platform', description: 'A full-featured online store with product listings, a shopping cart, and a secure checkout process.', imageUrl: 'https://picsum.photos/seed/e-commerce/600/400', dataAiHint: 'e-commerce website', liveUrl: '#', codeUrl: '#' },
+    { title: 'Task Management App', description: 'A collaborative tool for teams to organize tasks, set deadlines, and track progress with an intuitive interface.', imageUrl: 'https://picsum.photos/seed/task-manager/600/400', dataAiHint: 'task manager', liveUrl: '#', codeUrl: '#' },
+    { title: 'Data Visualization Dashboard', description: 'An analytics dashboard that presents complex data sets through interactive charts and graphs.', imageUrl: 'https://picsum.photos/seed/dashboard/600/400', dataAiHint: 'analytics dashboard', liveUrl: '#', codeUrl: '#' },
+    { title: 'Social Media Feed', description: 'A dynamic feed that displays posts from various social media platforms in real-time.', imageUrl: 'https://picsum.photos/seed/social-feed/600/400', dataAiHint: 'social media', liveUrl: '#', codeUrl: '#' },
+    { title: 'Weather Forecast App', description: 'Get accurate, up-to-date weather forecasts for any location with a clean and simple UI.', imageUrl: 'https://picsum.photos/seed/weather-app/600/400', dataAiHint: 'weather app', liveUrl: '#', codeUrl: '#' },
+    { title: 'Recipe Finder', description: 'Search for recipes based on ingredients you have at home, with step-by-step instructions.', imageUrl: 'https://picsum.photos/seed/recipe-finder/600/400', dataAiHint: 'recipe book', liveUrl: '#', codeUrl: '#' },
 ];
 
 const myTimelineItems = [
@@ -97,10 +97,10 @@ export default function Home() {
       <section id="home" className="min-h-[calc(100vh-5rem)] flex flex-col-reverse md:flex-row items-center justify-center gap-12 py-20">
         <div className="flex flex-col items-center md:items-start text-center md:text-left space-y-6">
           <h1 className="font-headline text-4xl md:text-6xl font-bold tracking-tight">
-            <span className="block text-white">Hi, I&apos;m</span>
-            <span className="text-white drop-shadow-[0_1.2px_1.2px_rgba(0,0,0,0.8)]">Pratham S</span>
+            <span className="block text-brand-white">Hi, I&apos;m</span>
+            <span className="text-brand-white drop-shadow-[0_1.2px_1.2px_rgba(0,0,0,0.8)]">Pratham S</span>
           </h1>
-          <p className="text-lg md:text-xl text-gray-200 max-w-xl">
+          <p className="text-lg md:text-xl text-brand-light-gray max-w-xl">
             A passionate Frontend developer creating modern, responsive, and user-friendly web applications.
           </p>
           <div className="flex flex-col items-center md:items-start gap-6">
@@ -108,23 +108,23 @@ export default function Home() {
               <Button asChild size="lg" className="bg-white/90 text-primary hover:bg-white">
                 <Link href="/prathamkumar-resume.pdf" target="_blank">Download CV <Download className="ml-2" /></Link>
               </Button>
-              <Button asChild size="lg" variant="outline" className="bg-transparent text-white border-white hover:bg-white hover:text-primary">
+              <Button asChild size="lg" variant="outline" className="bg-transparent text-brand-white border-brand-white hover:bg-white hover:text-primary">
                 <Link href="https://forms.gle/7axq8mV9Y5T9YhmL8" target="_blank" rel="noopener noreferrer">Inquiry Now</Link>
               </Button>
             </div>
             <div className="flex justify-center md:justify-start gap-4 mt-6">
-               <Link href="#" aria-label="LinkedIn" className="bg-white/20 text-white p-3 rounded-full inline-flex items-center justify-center hover:bg-white hover:text-primary transition-colors"><Linkedin /></Link>
-               <Link href="#" aria-label="GitHub" className="bg-white/20 text-white p-3 rounded-full inline-flex items-center justify-center hover:bg-white hover:text-primary transition-colors"><Github /></Link>
-               <Link href="#" aria-label="Twitter" className="bg-white/20 text-white p-3 rounded-full inline-flex items-center justify-center hover:bg-white hover:text-primary transition-colors"><Twitter /></Link>
-               <Link href="#" aria-label="Instagram" className="bg-white/20 text-white p-3 rounded-full inline-flex items-center justify-center hover:bg-white hover:text-primary transition-colors"><Instagram /></Link>
-               <Link href="#" aria-label="Facebook" className="bg-white/20 text-white p-3 rounded-full inline-flex items-center justify-center hover:bg-white hover:text-primary transition-colors"><Facebook /></Link>
+               <Link href="#" aria-label="LinkedIn" className="bg-white/20 text-brand-white p-3 rounded-full inline-flex items-center justify-center hover:bg-white hover:text-primary transition-colors"><Linkedin /></Link>
+               <Link href="#" aria-label="GitHub" className="bg-white/20 text-brand-white p-3 rounded-full inline-flex items-center justify-center hover:bg-white hover:text-primary transition-colors"><Github /></Link>
+               <Link href="#" aria-label="Twitter" className="bg-white/20 text-brand-white p-3 rounded-full inline-flex items-center justify-center hover:bg-white hover:text-primary transition-colors"><Twitter /></Link>
+               <Link href="#" aria-label="Instagram" className="bg-white/20 text-brand-white p-3 rounded-full inline-flex items-center justify-center hover:bg-white hover:text-primary transition-colors"><Instagram /></Link>
+               <Link href="#" aria-label="Facebook" className="bg-white/20 text-brand-white p-3 rounded-full inline-flex items-center justify-center hover:bg-white hover:text-primary transition-colors"><Facebook /></Link>
             </div>
           </div>
         </div>
        
         <div className="md:col-span-1 flex justify-center">
             <Image
-              src="/images/hero.jpg"
+              src="https://picsum.photos/seed/hero/400/500"
               alt="Pratham S"
               width={400}
               height={500}
@@ -139,7 +139,7 @@ export default function Home() {
          <div className="grid md:grid-cols-3 gap-12 items-center">
             <div className="md:col-span-1 flex justify-center">
             <Image
-              src="/images/about.jpg"
+              src="https://picsum.photos/seed/about/400/500"
               alt="About Pratham"
               width={400}
               height={500}
@@ -149,29 +149,29 @@ export default function Home() {
             </div>
             <div className="md:col-span-2 space-y-6">
               <h2 className="font-headline text-3xl md:text-4xl font-bold">About Me</h2>
-              <p className="text-lg text-foreground/80">
-                  Hello! I&apos;m Pratham, a dedicated Frontend Developer with a passion for building beautiful, functional, and user-centric digital experiences. With over 20+ projects completed and 2 years of professional experience, I have a proven track record of delivering high-quality work. All my clients are fully satisfied with the work delivered, reflected in over 10 positive reviews with an average rating of 4.5 stars.
+              <p className="text-lg text-brand-light-gray">
+                  Hello! I&apos;m Pratham, a dedicated Frontend Developer with a passion for building beautiful, functional, and user-centric digital experiences. With over <span className="text-brand-orange font-semibold">20+ projects</span> completed and <span className="text-brand-orange font-semibold">2 years</span> of professional experience, I have a proven track record of delivering high-quality work. All my clients are fully satisfied with the work delivered, reflected in over 10 positive reviews with an average rating of 4.5 stars.
               </p>
               <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
                   <div className="flex flex-col items-center gap-2">
-                      <Briefcase className="w-10 h-10 text-primary" />
-                      <p className="text-3xl font-bold"><AnimatedCounter value={20} />+</p>
-                      <p className="text-muted-foreground">Projects</p>
+                      <Briefcase className="w-10 h-10 text-brand-violet" />
+                      <p className="text-3xl font-bold text-brand-white"><AnimatedCounter value={20} />+</p>
+                      <p className="text-brand-light-gray/80">Projects</p>
                   </div>
                    <div className="flex flex-col items-center gap-2">
-                      <Calendar className="w-10 h-10 text-primary" />
-                      <p className="text-3xl font-bold"><AnimatedCounter value={2} /></p>
-                      <p className="text-muted-foreground">Years Experience</p>
+                      <Calendar className="w-10 h-10 text-brand-violet" />
+                      <p className="text-3xl font-bold text-brand-white"><AnimatedCounter value={2} /></p>
+                      <p className="text-brand-light-gray/80">Years Experience</p>
                   </div>
                    <div className="flex flex-col items-center gap-2">
-                      <Users className="w-10 h-10 text-primary" />
-                      <p className="text-3xl font-bold"><AnimatedCounter value={15} />+</p>
-                      <p className="text-muted-foreground">Happy Clients</p>
+                      <Users className="w-10 h-10 text-brand-violet" />
+                      <p className="text-3xl font-bold text-brand-white"><AnimatedCounter value={15} />+</p>
+                      <p className="text-brand-light-gray/80">Happy Clients</p>
                   </div>
                    <div className="flex flex-col items-center gap-2">
-                      <Star className="w-10 h-10 text-primary" />
-                      <p className="text-3xl font-bold">4.5<span className='text-xl'>★</span></p>
-                      <p className="text-muted-foreground">Reviews</p>
+                      <Star className="w-10 h-10 text-brand-violet" />
+                      <p className="text-3xl font-bold text-brand-white">4.5<span className='text-xl'>★</span></p>
+                      <p className="text-brand-light-gray/80">Reviews</p>
                   </div>
               </div>
             </div>
@@ -187,8 +187,8 @@ export default function Home() {
                <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-8 max-w-4xl mx-auto">
                 {skills.map((skill) => (
                   <div key={skill.name} className="flex flex-col items-center justify-center gap-4 p-4 rounded-lg bg-card/50 dark:bg-slate-800/50 border border-border/50 dark:border-slate-700/50 hover:border-primary hover:-translate-y-1 transition-all duration-300">
-                    <div className="text-primary w-12 h-12">{skill.icon}</div>
-                    <p className="font-semibold text-center">{skill.name}</p>
+                    <div className="text-brand-violet w-12 h-12">{skill.icon}</div>
+                    <p className="font-semibold text-center text-brand-white">{skill.name}</p>
                   </div>
                 ))}
               </div>
@@ -216,7 +216,7 @@ export default function Home() {
       <section id="contact" className="py-20">
           <div className="text-center mb-12">
             <h2 className="font-headline text-3xl md:text-4xl font-bold">Let's Talk</h2>
-            <p className="text-muted-foreground mt-2 max-w-2xl mx-auto">
+            <p className="text-brand-light-gray mt-2 max-w-2xl mx-auto">
               I'll get back to you within 24 hours.
             </p>
           </div>
