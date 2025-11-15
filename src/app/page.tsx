@@ -133,14 +133,14 @@ export default function Home() {
        
         <div className="md:col-span-1 flex justify-center">
             <Image
-  src="/hero.jpg"
-  alt="Pratham S"
-  width={400}
-  height={500}
-  className="rounded-xl shadow-lg transition-transform duration-300 hover:scale-105"
-/>
-
-            </div>
+              src="https://picsum.photos/seed/developer/400/500"
+              alt="Pratham S"
+              width={400}
+              height={500}
+              className="rounded-xl shadow-lg transition-transform duration-300 hover:scale-105"
+              data-ai-hint="developer portrait"
+            />
+        </div>
       </section>
      
       {/* About Section */}
@@ -148,13 +148,13 @@ export default function Home() {
          <div className="grid md:grid-cols-3 gap-12 items-center">
             <div className="md:col-span-1 flex justify-center">
             <Image
-  src="/about.jpg"
-  alt="About Pratham"
-  width={400}
-  height={500}
-  className="rounded-xl shadow-lg transition-transform duration-300 hover:scale-105"
-/>
-
+              src="https://picsum.photos/seed/workspace/400/500"
+              alt="About Pratham"
+              width={400}
+              height={500}
+              className="rounded-xl shadow-lg transition-transform duration-300 hover:scale-105"
+              data-ai-hint="workspace desk"
+            />
             </div>
             <div className="md:col-span-2 space-y-6">
                 <h2 className="font-headline text-3xl md:text-4xl font-bold">About Me</h2>
