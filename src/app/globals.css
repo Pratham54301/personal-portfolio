@@ -67,6 +67,6 @@
     scroll-padding-top: 5rem; /* Offset for sticky nav */
   }
   body {
-    @apply bg-gradient-to-br from-[#5A2CA0] to-[#FF7A3E] text-white;
+    @apply bg-gradient-to-br from-[#5A2CA0] via-[#7B3EC8] to-[#FF7A3E] text-white;
   }
 }
