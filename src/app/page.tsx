@@ -94,7 +94,7 @@ export default function Home() {
   return (
     <div className="container mx-auto px-4">
       {/* Hero Section */}
-      <section id="home" className="min-h-[calc(100vh-5rem)] flex flex-col-reverse md:flex-row items-center justify-center gap-12 py-20 bg-gradient-to-br from-[#5A2CA0] via-[#7B3EC8] to-[#FF7A3E]">
+      <section id="home" className="min-h-[calc(100vh-5rem)] flex flex-col-reverse md:flex-row items-center justify-center gap-12 py-20">
         <div className="flex flex-col items-center md:items-start text-center md:text-left space-y-6">
           <h1 className="font-headline text-4xl md:text-6xl font-bold tracking-tight">
             <span className="block text-white">Hi, I&apos;m</span>
@@ -233,5 +233,3 @@ export default function Home() {
     </div>
   )
 }
-
-    

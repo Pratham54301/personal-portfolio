@@ -25,7 +25,7 @@ export default function RootLayout({
         />
       </head>
       <body className="font-body antialiased">
-        <ThemeProvider storageKey="portfolioflow-theme">
+        <ThemeProvider storageKey="portfolioflow-theme" defaultTheme="dark">
           <ClientLayoutWrapper>{children}</ClientLayoutWrapper>
           <Toaster />
         </ThemeProvider>
