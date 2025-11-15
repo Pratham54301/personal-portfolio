@@ -124,7 +124,7 @@ export default function Home() {
        
         <div className="md:col-span-1 flex justify-center">
             <Image
-              src="/images/hero.jpg"
+              src="https://picsum.photos/seed/hero/400/500"
               alt="Pratham S"
               width={400}
               height={500}
@@ -139,7 +139,7 @@ export default function Home() {
          <div className="grid md:grid-cols-3 gap-12 items-center">
             <div className="md:col-span-1 flex justify-center">
             <Image
-              src="/images/about.jpg"
+              src="https://picsum.photos/seed/about/400/500"
               alt="About Pratham"
               width={400}
               height={500}
@@ -233,3 +233,5 @@ export default function Home() {
     </div>
   )
 }
+
+    
