@@ -84,7 +84,7 @@ export function Navbar() {
         </nav>
         <div className="hidden md:block">
           <ThemeToggle />
-        </div>
+        </div> 
         <div className="md:hidden flex items-center gap-2">
           <ThemeToggle />
           <Button onClick={toggleMenu} variant="ghost" size="icon">
