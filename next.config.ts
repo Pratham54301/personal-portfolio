@@ -18,12 +18,14 @@ const nextConfig: NextConfig = {
       },
       {
         protocol: 'https',
-        hostname: 'picsum.photos',
+        hostname: 'tailwindui.com',
         port: '',
         pathname: '/**',
-      }
+      },
     ],
   },
 };
 
 export default nextConfig;
+
+    

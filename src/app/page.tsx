@@ -1,6 +1,6 @@
 import { Button } from '@/components/ui/button';
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
-import { Briefcase, Calendar, Code, Download, Github, GraduationCap, Instagram, Linkedin, PenTool, Star, Twitter, Users, Atom, Cloud, Palette, Facebook } from 'lucide-react';
+import { Briefcase, Calendar, Code, Download, Github, GraduationCap, Instagram, Linkedin, PenTool, Star, Twitter, Users, Atom, Cloud, Palette, Facebook, ExternalLink } from 'lucide-react';
 import Image from 'next/image';
 import Link from 'next/link';
 import { AnimatedCounter } from '@/components/animated-counter';
@@ -10,6 +10,7 @@ import { ContactSocials } from '@/components/contact-socials';
 import { BlogSection } from '@/components/blog-section';
 import { ContactDetails } from '@/components/contact-details';
 import { ProjectsCarousel } from '@/components/projects-carousel';
+
 
 const skills = [
     { name: 'HTML5', icon: <Code className="w-full h-full" /> },
@@ -25,21 +26,12 @@ const skills = [
 ];
 
 const projects = [
-    { title: 'E-commerce Platform', description: 'A full-featured online store with product listings, a shopping cart, and a secure checkout process.', imageUrl: 'https://placehold.co/600x400.png', dataAiHint: 'e-commerce website', liveUrl: '#', codeUrl: '#' },
-    { title: 'Task Management App', description: 'A collaborative tool for teams to organize tasks, set deadlines, and track progress with an intuitive interface.', imageUrl: 'https://placehold.co/600x400.png', dataAiHint: 'task manager', liveUrl: '#', codeUrl: '#' },
-    { title: 'Data Visualization Dashboard', description: 'An analytics dashboard that presents complex data sets through interactive charts and graphs.', imageUrl: 'https://placehold.co/600x400.png', dataAiHint: 'analytics dashboard', liveUrl: '#', codeUrl: '#' },
-    { title: 'Social Media Feed', description: 'A dynamic feed that displays posts from various social media platforms in real-time.', imageUrl: 'https://placehold.co/600x400.png', dataAiHint: 'social media', liveUrl: '#', codeUrl: '#' },
-    { title: 'Weather Forecast App', description: 'Get accurate, up-to-date weather forecasts for any location with a clean and simple UI.', imageUrl: 'https://placehold.co/600x400.png', dataAiHint: 'weather app', liveUrl: '#', codeUrl: '#' },
-    { title: 'Recipe Finder', description: 'Search for recipes based on ingredients you have at home, with step-by-step instructions.', imageUrl: 'https://placehold.co/600x400.png', dataAiHint: 'recipe book', liveUrl: '#', codeUrl: '#' },
-    { title: 'Portfolio Website Template', description: 'A sleek and modern portfolio template for creatives to showcase their work.', imageUrl: 'https://placehold.co/600x400.png', dataAiHint: 'portfolio website', liveUrl: '#', codeUrl: '#' },
-    { title: 'Interactive Map Application', description: 'A custom map with interactive markers, layers, and data visualization features.', imageUrl: 'https://placehold.co/600x400.png', dataAiHint: 'interactive map', liveUrl: '#', codeUrl: '#' },
-    { title: 'Online Learning Platform', description: 'An e-learning site offering courses on various subjects with video lectures and quizzes.', imageUrl: 'https://placehold.co/600x400.png', dataAiHint: 'online course', liveUrl: '#', codeUrl: '#' },
-    { title: 'Chat Application', description: 'A real-time chat application with private messaging and group chat features.', imageUrl: 'https://placehold.co/600x400.png', dataAiHint: 'chat application', liveUrl: '#', codeUrl: '#' },
-    { title: 'Music Streaming Service', description: 'A music streaming platform with a vast library of songs, playlists, and user profiles.', imageUrl: 'https://placehold.co/600x400.png', dataAiHint: 'music player', liveUrl: '#', codeUrl: '#' },
-    { title: 'Fitness Tracker', description: 'A mobile-friendly app to track workouts, set fitness goals, and monitor progress.', imageUrl: 'https://placehold.co/600x400.png', dataAiHint: 'fitness app', liveUrl: '#', codeUrl: '#' },
-    { title: 'Event Ticketing System', description: 'A platform for discovering, booking, and managing tickets for various events.', imageUrl: 'https://placehold.co/600x400.png', dataAiHint: 'event tickets', liveUrl: '#', codeUrl: '#' },
-    { title: 'AI-Powered Content Generator', description: 'A tool that uses AI to generate creative content like articles, summaries, and social media posts.', imageUrl: 'https://placehold.co/600x400.png', dataAiHint: 'ai generator', liveUrl: '#', codeUrl: '#' },
-    { title: 'Language Learning App', description: 'An interactive app for learning new languages with gamified lessons and exercises.', imageUrl: 'https://placehold.co/600x400.png', dataAiHint: 'language learning', liveUrl: '#', codeUrl: '#' },
+    { title: 'E-commerce Platform', description: 'A full-featured online store with product listings, a shopping cart, and a secure checkout process.', imageUrl: 'https://picsum.photos/seed/e-commerce/600/400', dataAiHint: 'e-commerce website', liveUrl: '#', codeUrl: '#' },
+    { title: 'Task Management App', description: 'A collaborative tool for teams to organize tasks, set deadlines, and track progress with an intuitive interface.', imageUrl: 'https://picsum.photos/seed/task-manager/600/400', dataAiHint: 'task manager', liveUrl: '#', codeUrl: '#' },
+    { title: 'Data Visualization Dashboard', description: 'An analytics dashboard that presents complex data sets through interactive charts and graphs.', imageUrl: 'https://picsum.photos/seed/dashboard/600/400', dataAiHint: 'analytics dashboard', liveUrl: '#', codeUrl: '#' },
+    { title: 'Social Media Feed', description: 'A dynamic feed that displays posts from various social media platforms in real-time.', imageUrl: 'https://picsum.photos/seed/social-feed/600/400', dataAiHint: 'social media', liveUrl: '#', codeUrl: '#' },
+    { title: 'Weather Forecast App', description: 'Get accurate, up-to-date weather forecasts for any location with a clean and simple UI.', imageUrl: 'https://picsum.photos/seed/weather-app/600/400', dataAiHint: 'weather app', liveUrl: '#', codeUrl: '#' },
+    { title: 'Recipe Finder', description: 'Search for recipes based on ingredients you have at home, with step-by-step instructions.', imageUrl: 'https://picsum.photos/seed/recipe-finder/600/400', dataAiHint: 'recipe book', liveUrl: '#', codeUrl: '#' },
 ];
 
 const myTimelineItems = [
@@ -133,7 +125,7 @@ export default function Home() {
        
         <div className="md:col-span-1 flex justify-center">
             <Image
-              src="https://picsum.photos/seed/developer/400/500"
+              src="/images/hero.jpg"
               alt="Pratham S"
               width={400}
               height={500}
@@ -148,7 +140,7 @@ export default function Home() {
          <div className="grid md:grid-cols-3 gap-12 items-center">
             <div className="md:col-span-1 flex justify-center">
             <Image
-              src="https://picsum.photos/seed/workspace/400/500"
+              src="/images/about.jpg"
               alt="About Pratham"
               width={400}
               height={500}
@@ -157,32 +149,32 @@ export default function Home() {
             />
             </div>
             <div className="md:col-span-2 space-y-6">
-                <h2 className="font-headline text-3xl md:text-4xl font-bold">About Me</h2>
-                <p className="text-lg text-foreground/80">
-                    Hello! I&apos;m Pratham, a dedicated and results-oriented developer with a passion for building beautiful, functional, and user-centric digital experiences. My journey into web development started from a deep curiosity about how things work on the internet, and it has since evolved into a fulfilling career where I get to solve complex problems and bring ideas to life.
-                </p>
-                <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
-                    <div className="flex flex-col items-center gap-2">
-                        <Briefcase className="w-10 h-10 text-primary" />
-                        <p className="text-3xl font-bold"><AnimatedCounter value={7} /></p>
-                        <p className="text-muted-foreground">Projects</p>
-                    </div>
-                     <div className="flex flex-col items-center gap-2">
-                        <Calendar className="w-10 h-10 text-primary" />
-                        <p className="text-3xl font-bold"><AnimatedCounter value={1} /></p>
-                        <p className="text-muted-foreground">Years Experience</p>
-                    </div>
-                     <div className="flex flex-col items-center gap-2">
-                        <Users className="w-10 h-10 text-primary" />
-                        <p className="text-3xl font-bold"><AnimatedCounter value={5} /></p>
-                        <p className="text-muted-foreground">Happy Clients</p>
-                    </div>
-                     <div className="flex flex-col items-center gap-2">
-                        <Star className="w-10 h-10 text-primary" />
-                        <p className="text-3xl font-bold"><AnimatedCounter value={5} /></p>
-                        <p className="text-muted-foreground">Reviews</p>
-                    </div>
-                </div>
+              <h2 className="font-headline text-3xl md:text-4xl font-bold">About Me</h2>
+              <p className="text-lg text-foreground/80">
+                  Hello! I&apos;m Pratham, a dedicated Frontend Developer with a passion for building beautiful, functional, and user-centric digital experiences. With over 20+ projects completed and 2 years of professional experience, I have a proven track record of delivering high-quality work. All my clients are fully satisfied with the work delivered, reflected in over 10 positive reviews with an average rating of 4.5 stars.
+              </p>
+              <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+                  <div className="flex flex-col items-center gap-2">
+                      <Briefcase className="w-10 h-10 text-primary" />
+                      <p className="text-3xl font-bold"><AnimatedCounter value={20} />+</p>
+                      <p className="text-muted-foreground">Projects</p>
+                  </div>
+                   <div className="flex flex-col items-center gap-2">
+                      <Calendar className="w-10 h-10 text-primary" />
+                      <p className="text-3xl font-bold"><AnimatedCounter value={2} /></p>
+                      <p className="text-muted-foreground">Years Experience</p>
+                  </div>
+                   <div className="flex flex-col items-center gap-2">
+                      <Users className="w-10 h-10 text-primary" />
+                      <p className="text-3xl font-bold"><AnimatedCounter value={15} />+</p>
+                      <p className="text-muted-foreground">Happy Clients</p>
+                  </div>
+                   <div className="flex flex-col items-center gap-2">
+                      <Star className="w-10 h-10 text-primary" />
+                      <p className="text-3xl font-bold">4.5<span className='text-xl'>★</span></p>
+                      <p className="text-muted-foreground">Reviews</p>
+                  </div>
+              </div>
             </div>
         </div>
       </section>
