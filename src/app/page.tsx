@@ -2,6 +2,7 @@ import { Button } from '@/components/ui/button';
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { Briefcase, Calendar, Code, Download, Github, GraduationCap, Instagram, Linkedin, PenTool, Star, Twitter, Users, Atom, Cloud, Palette, Facebook, ExternalLink } from 'lucide-react';
 import Image from 'next/image';
+import { Typewriter } from '@/components/typewriter';
 
 import Hero from '@/Public/hero01.jpg';
 import About from '@/Public/about01.jpg';
@@ -99,9 +100,9 @@ export default function Home() {
       {/* Hero Section */}
       <section id="home" className="min-h-[calc(100vh-5rem)] flex flex-col-reverse md:flex-row items-center justify-center gap-12 py-20">
         <div className="flex flex-col items-center md:items-start text-center md:text-left space-y-6">
-          <h1 className="font-headline text-4xl md:text-6xl font-bold tracking-tight">
-            <span className="block text-brand-white">Hi, I&apos;m</span>
-            <span className="text-brand-white drop-shadow-[0_1.2px_1.2px_rgba(0,0,0,0.8)]">Pratham S</span>
+          <h1 className="font-headline text-4xl md:text-6xl font-bold tracking-tight h-40 md:h-24">
+            <span className="block text-brand-white">Hi, I'm</span>
+            <Typewriter texts={['Pratham S', 'Frontend Developer']} className="text-brand-white drop-shadow-[0_1.2px_1.2px_rgba(0,0,0,0.8)]" />
           </h1>
           <p className="text-lg md:text-xl text-brand-light-gray max-w-xl">
             A passionate Frontend developer creating modern, responsive, and user-friendly web applications.
