@@ -102,26 +102,23 @@ export default function Home() {
         <div className="flex flex-col items-center md:items-start text-center md:text-left space-y-6">
           <h1 className="font-headline text-4xl md:text-6xl font-bold tracking-tight h-40 md:h-24">
             <span className="block text-brand-white">Hi, I'm</span>
-            <Typewriter texts={['Pratham S', 'Frontend Developer']} className="text-brand-white drop-shadow-[0_1.2px_1.2px_rgba(0,0,0,0.8)]" />
+            <Typewriter texts={['Prathamkumar Sakariya', 'Frontend Developer']} className="text-brand-white drop-shadow-[0_1.2px_1.2px_rgba(0,0,0,0.8)]" />
           </h1>
           <p className="text-lg md:text-xl text-brand-light-gray max-w-xl">
             A passionate Frontend developer creating modern, responsive, and user-friendly web applications.
           </p>
           <div className="flex flex-col items-center md:items-start gap-6">
             <div className="flex flex-wrap justify-center gap-4">
-              <Button asChild size="lg" className="bg-white/90 text-primary hover:bg-white">
-                <Link href="/prathamkumar-resume.pdf" target="_blank">Download CV <Download className="ml-2" /></Link>
-              </Button>
-              <Button asChild size="lg" variant="outline" className="bg-transparent text-brand-white border-brand-white hover:bg-white hover:text-primary">
-                <Link href="https://forms.gle/7axq8mV9Y5T9YhmL8" target="_blank" rel="noopener noreferrer">Inquiry Now</Link>
+            <Button asChild size="lg" className="bg-white/90 text-primary hover:bg-white">
+            <Link href="https://forms.gle/7axq8mV9Y5T9YhmL8" target="_blank" rel="noopener noreferrer">Inquiry Now</Link>
               </Button>
             </div>
             <div className="flex justify-center md:justify-start gap-4 mt-6">
-               <Link href="#" aria-label="LinkedIn" className="bg-white/20 text-brand-white p-3 rounded-full inline-flex items-center justify-center hover:bg-white hover:text-primary transition-colors"><Linkedin /></Link>
-               <Link href="#" aria-label="GitHub" className="bg-white/20 text-brand-white p-3 rounded-full inline-flex items-center justify-center hover:bg-white hover:text-primary transition-colors"><Github /></Link>
-               <Link href="#" aria-label="Twitter" className="bg-white/20 text-brand-white p-3 rounded-full inline-flex items-center justify-center hover:bg-white hover:text-primary transition-colors"><Twitter /></Link>
-               <Link href="#" aria-label="Instagram" className="bg-white/20 text-brand-white p-3 rounded-full inline-flex items-center justify-center hover:bg-white hover:text-primary transition-colors"><Instagram /></Link>
-               <Link href="#" aria-label="Facebook" className="bg-white/20 text-brand-white p-3 rounded-full inline-flex items-center justify-center hover:bg-white hover:text-primary transition-colors"><Facebook /></Link>
+               <Link href="www.linkedin.com/in/prathamkumar-sakariya-171851311" aria-label="LinkedIn" className="bg-white/20 text-brand-white p-3 rounded-full inline-flex items-center justify-center hover:bg-white hover:text-primary transition-colors"><Linkedin /></Link>
+               <Link href="https://github.com/Pratham54301" aria-label="GitHub" className="bg-white/20 text-brand-white p-3 rounded-full inline-flex items-center justify-center hover:bg-white hover:text-primary transition-colors"><Github /></Link>
+               <Link href="https://x.com/prathams54301" aria-label="Twitter" className="bg-white/20 text-brand-white p-3 rounded-full inline-flex items-center justify-center hover:bg-white hover:text-primary transition-colors"><Twitter /></Link>
+               <Link href="https://www.instagram.com/pratham_.04_10" aria-label="Instagram" className="bg-white/20 text-brand-white p-3 rounded-full inline-flex items-center justify-center hover:bg-white hover:text-primary transition-colors"><Instagram /></Link>
+               <Link href="https://www.facebook.com/pratham.04.10" aria-label="Facebook" className="bg-white/20 text-brand-white p-3 rounded-full inline-flex items-center justify-center hover:bg-white hover:text-primary transition-colors"><Facebook /></Link>
             </div>
           </div>
         </div>
