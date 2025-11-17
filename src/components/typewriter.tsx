@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, useEffect, useRef } from 'react';
+import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 
 const blinkAnimation = {
@@ -18,17 +18,10 @@ export function Typewriter({
   const [textIndex, setTextIndex] = useState(0);
   const [displayedText, setDisplayedText] = useState('');
   const [isDeleting, setIsDeleting] = useState(false);
-  const [showCursor, setShowCursor] = useState(true);
 
   useEffect(() => {
-    if (textIndex >= texts.length) {
-      setShowCursor(false);
-      return;
-    };
-
-    const currentText = texts[textIndex];
-
     const handleTyping = () => {
+      const currentText = texts[textIndex % texts.length];
       if (isDeleting) {
         if (displayedText.length > 0) {
           // Deleting
@@ -50,12 +43,7 @@ export function Typewriter({
           }, typingSpeed);
         } else {
           // Finished typing, pause and then start deleting
-          const isLastText = textIndex === texts.length - 1;
-          if (!isLastText) {
-             setTimeout(() => setIsDeleting(true), 600);
-          } else {
-             setShowCursor(false);
-          }
+          setTimeout(() => setIsDeleting(true), 700);
         }
       }
     };
@@ -69,11 +57,9 @@ export function Typewriter({
     <span className={className}>
       {displayedText}
       <AnimatePresence>
-        {showCursor && (
-          <motion.span {...blinkAnimation} className="ml-1">
-            |
-          </motion.span>
-        )}
+        <motion.span {...blinkAnimation} className="ml-1">
+          |
+        </motion.span>
       </AnimatePresence>
     </span>
   );
