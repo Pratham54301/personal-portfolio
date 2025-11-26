@@ -259,7 +259,7 @@ export default function Home() {
             <div className="md:col-span-2 space-y-6">
               <h2 className="font-headline text-3xl md:text-4xl font-bold">About Me</h2>
                <p className="text-lg text-muted-foreground">
-               Senior Software Developer with 4+ years of hands-on experience delivering scalable, high-performance web applications using React.js, Next.js, Node.js, TypeScript, MongoDB, and cloud-first architecture.
+               Senior Software Developer with 2+ years of hands-on experience delivering scalable, high-performance web applications using React.js, Next.js, Node.js, TypeScript, MongoDB, and cloud-first architecture.
 Specialized in building SaaS platforms, AI-driven dashboards, real-time systems, and enterprise-grade UI design.
               </p>
               <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
