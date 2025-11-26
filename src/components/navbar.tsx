@@ -7,6 +7,7 @@ import { ThemeToggle } from './theme-toggle';
 import { cn } from '@/lib/utils';
 import { Menu, X } from 'lucide-react';
 import { Button } from './ui/button';
+import Image from 'next/image';
 
 const navLinks = [
   { href: '/#home', label: 'Home', sectionId: 'home' },
@@ -20,26 +21,7 @@ const navLinks = [
 
 function Logo() {
     return (
-        <svg
-            xmlns="http://www.w3.org/2000/svg"
-            viewBox="0 0 100 100"
-            width="40"
-            height="40"
-            className="text-primary"
-        >
-            <path
-                fill="currentColor"
-                d="M50 5C25.1 5 5 25.1 5 50s20.1 45 45 45 45-20.1 45-45S74.9 5 50 5zM50 85c-19.3 0-35-15.7-35-35s15.7-35 35-35 35 15.7 35 35-15.7 35-35 35z"
-            />
-            <path
-                fill="currentColor"
-                d="M50 25c-3.7 0-6.8 3-6.8 6.8s3 6.8 6.8 6.8 6.8-3 6.8-6.8-3-6.8-6.8-6.8zm0 10.5c-2.1 0-3.8-1.7-3.8-3.8s1.7-3.8 3.8-3.8 3.8 1.7 3.8 3.8-1.7 3.8-3.8 3.8z"
-            />
-            <path
-                fill="currentColor"
-                d="M50 60c-8.3 0-15 6.7-15 15h30c0-8.3-6.7-15-15-15zm-12 12c.5-5.1 4.7-9 9.9-9s9.4 3.9 9.9 9H38z"
-            />
-        </svg>
+        <Image src="/logo.png" alt="Logo" width={40} height={40} className="text-primary" />
     )
 }
 
