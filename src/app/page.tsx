@@ -1,11 +1,11 @@
 import { Button } from '@/components/ui/button';
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
-import { Briefcase, Calendar, Code, Download, Github, GraduationCap, Instagram, Linkedin, PenTool, Star, Twitter, Users, Atom, Cloud, Palette, Facebook, ExternalLink } from 'lucide-react';
+import { Briefcase, Calendar, Code, Download, Github, GraduationCap, Instagram, Linkedin, PenTool, Star, Twitter, Users, Atom, Cloud, Palette, Facebook, ExternalLink, Server, Database, GitBranch, Terminal } from 'lucide-react';
 import Image from 'next/image';
 import { Typewriter } from '@/components/typewriter';
 
-import Hero from '@/Public/hero01.jpg';
-import About from '@/Public/about01.jpg';
+import Hero from '/hero.jpg';
+import About from '/about.jpg';
 import Link from 'next/link';
 import { AnimatedCounter } from '@/components/animated-counter';
 import { Timeline } from '@/components/timeline';
@@ -16,17 +16,23 @@ import { ContactDetails } from '@/components/contact-details';
 import { ProjectsCarousel } from '@/components/projects-carousel';
 
 const skills = [
-    { name: 'HTML5', icon: <Code className="w-full h-full" /> },
-    { name: 'CSS3', icon: <Palette className="w-full h-full" /> },
-    { name: 'JavaScript', icon: <Code className="w-full h-full" /> },
-    { name: 'React JS', icon: <Atom className="w-full h-full" /> },
+    { name: 'React/Next.js', icon: <Atom className="w-full h-full" /> },
+    { name: 'JavaScript/ES6+', icon: <Code className="w-full h-full" /> },
+    { name: 'TypeScript', icon: <Code className="w-full h-full" /> },
+    { name: 'HTML5 & CSS3', icon: <Palette className="w-full h-full" /> },
+    { name: 'Tailwind CSS', icon: <Palette className="w-full h-full" /> },
+    { name: 'Redux Toolkit', icon: <Atom className="w-full h-full" /> },
+    { name: 'Node.js/Express', icon: <Server className="w-full h-full" /> },
+    { name: 'MongoDB', icon: <Database className="w-full h-full" /> },
     { name: 'Firebase', icon: <Cloud className="w-full h-full" /> },
-    { name: 'GitHub', icon: <Github className="w-full h-full" /> },
-    { name: 'Figma', icon: <PenTool className="w-full h-full" /> },
-    { name: 'Adobe XD', icon: <PenTool className="w-full h-full" /> },
-    { name: 'Team Management', icon: <Users className="w-full h-full" /> },
-    { name: 'Project Management', icon: <Briefcase className="w-full h-full" /> },
+    { name: 'Git & GitHub', icon: <GitBranch className="w-full h-full" /> },
+    { name: 'Figma to Code', icon: <PenTool className="w-full h-full" /> },
+    { name: 'REST APIs', icon: <Server className="w-full h-full" /> },
+    { name: 'VS Code', icon: <Terminal className="w-full h-full" /> },
+    { name: 'Postman', icon: <Terminal className="w-full h-full" /> },
+    { name: 'Performance Opt.', icon: <Users className="w-full h-full" /> },
 ];
+
 
 const projects = [
     { title: 'E-commerce Platform', description: 'A full-featured online store with product listings, a shopping cart, and a secure checkout process.', imageUrl: '/project-ecommerce.jpg', dataAiHint: 'e-commerce website', liveUrl: '#', codeUrl: '#' },
@@ -125,7 +131,7 @@ export default function Home() {
        
         <div className="md:col-span-1 flex justify-center">
             <Image
-              src={Hero}
+              src="/hero.jpg"
               alt="Pratham S"
               width={400}
               height={500}
@@ -140,7 +146,7 @@ export default function Home() {
          <div className="grid md:grid-cols-3 gap-12 items-center">
             <div className="md:col-span-1 flex justify-center">
             <Image
-              src={About}
+              src="/about.jpg"
               alt="About Pratham"
               width={400}
               height={500}
@@ -151,7 +157,7 @@ export default function Home() {
             <div className="md:col-span-2 space-y-6">
               <h2 className="font-headline text-3xl md:text-4xl font-bold">About Me</h2>
               <p className="text-lg text-brand-light-gray">
-                  Hello! I&apos;m Pratham, a dedicated Frontend Developer with a passion for building beautiful, functional, and user-centric digital experiences. With over <span className="text-brand-orange font-semibold">20+ projects</span> completed and <span className="text-brand-orange font-semibold">2 years</span> of professional experience, I have a proven track record of delivering high-quality work. All my clients are fully satisfied with the work delivered, reflected in over 10 positive reviews with an average rating of 4.5 stars.
+                  I specialize in building modern, high-performance web applications. I combine strong engineering practices with clean UI/UX execution to build reliable and production-ready web solutions.
               </p>
               <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
                   <div className="flex flex-col items-center gap-2">
