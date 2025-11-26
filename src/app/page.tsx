@@ -1,3 +1,4 @@
+
 import { Button } from '@/components/ui/button';
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { Briefcase, Calendar, Code, Download, Github, GraduationCap, Instagram, Linkedin, PenTool, Star, Twitter, Users, Atom, Cloud, Palette, Facebook, ExternalLink, Server, Database, GitBranch, Terminal } from 'lucide-react';
@@ -168,8 +169,7 @@ export default function Home() {
                    <div className="flex flex-col items-center gap-2">
                       <Calendar className="w-10 h-10 text-brand-violet" />
                       <p className="text-3xl font-bold text-brand-white"><AnimatedCounter value={2} /></p>
-                      <p className="text-brand-light-gray/80">Years Experience</p>
-                  </div>
+                      <p className="text-brand-light-gray/80">Years Experience</p>                  </div>
                    <div className="flex flex-col items-center gap-2">
                       <Users className="w-10 h-10 text-brand-violet" />
                       <p className="text-3xl font-bold text-brand-white"><AnimatedCounter value={15} />+</p>
@@ -191,13 +191,15 @@ export default function Home() {
             {/* Skills Section */}
             <section id="skills" className="mb-20">
               <h2 className="font-headline text-3xl md:text-4xl font-bold text-center mb-12 uppercase">My Skills</h2>
-               <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-8 max-w-4xl mx-auto">
-                {skills.map((skill) => (
-                  <div key={skill.name} className="flex flex-col items-center justify-center gap-4 p-4 card-glass card-glass-hover">
-                    <div className="text-brand-violet w-12 h-12">{skill.icon}</div>
-                    <p className="font-semibold text-center text-brand-white">{skill.name}</p>
-                  </div>
-                ))}
+              <div className="mx-auto max-w-6xl overflow-hidden">
+                <div className="flex gap-8 overflow-x-auto pb-4 [-ms-overflow-style:none] [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">
+                    {skills.map((skill) => (
+                      <div key={skill.name} className="flex flex-col items-center justify-center gap-4 p-4 card-glass card-glass-hover flex-shrink-0 w-40 h-40">
+                        <div className="text-brand-violet w-12 h-12">{skill.icon}</div>
+                        <p className="font-semibold text-center text-brand-white">{skill.name}</p>
+                      </div>
+                    ))}
+                </div>
               </div>
             </section>
 
@@ -240,3 +242,5 @@ export default function Home() {
     </div>
   )
 }
+
+    
