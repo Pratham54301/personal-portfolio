@@ -1,8 +1,6 @@
 'use client';
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
-import Image from 'next/image';
-import Logo from '@/Public/logo.png';
 import { usePathname } from 'next/navigation';
 import { motion, AnimatePresence } from 'framer-motion';
 import { ThemeToggle } from './theme-toggle';
@@ -19,6 +17,31 @@ const navLinks = [
   { href: '/#blogs', label: 'Blogs', sectionId: 'blogs' },
   { href: '/#contact', label: 'Contact', sectionId: 'contact' },
 ];
+
+function Logo() {
+    return (
+        <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 100 100"
+            width="40"
+            height="40"
+            className="text-primary"
+        >
+            <path
+                fill="currentColor"
+                d="M50 5C25.1 5 5 25.1 5 50s20.1 45 45 45 45-20.1 45-45S74.9 5 50 5zM50 85c-19.3 0-35-15.7-35-35s15.7-35 35-35 35 15.7 35 35-15.7 35-35 35z"
+            />
+            <path
+                fill="currentColor"
+                d="M50 25c-3.7 0-6.8 3-6.8 6.8s3 6.8 6.8 6.8 6.8-3 6.8-6.8-3-6.8-6.8-6.8zm0 10.5c-2.1 0-3.8-1.7-3.8-3.8s1.7-3.8 3.8-3.8 3.8 1.7 3.8 3.8-1.7 3.8-3.8 3.8z"
+            />
+            <path
+                fill="currentColor"
+                d="M50 60c-8.3 0-15 6.7-15 15h30c0-8.3-6.7-15-15-15zm-12 12c.5-5.1 4.7-9 9.9-9s9.4 3.9 9.9 9H38z"
+            />
+        </svg>
+    )
+}
 
 export function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -70,7 +93,7 @@ export function Navbar() {
     >
       <div className="container mx-auto flex items-center justify-between px-4">
         <Link href="/#home">
-           <Image src={Logo} alt="PortfolioFlow Logo" width={40} height={40} priority />
+           <Logo />
         </Link>
         <nav className="hidden md:flex items-center gap-6">
           {navLinks.map(({ href, label, sectionId }) => (
