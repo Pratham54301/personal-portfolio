@@ -1,7 +1,8 @@
 
+
 import { Button } from '@/components/ui/button';
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
-import { Briefcase, Calendar, Code, Download, Github, GraduationCap, Instagram, Linkedin, PenTool, Star, Twitter, Users, Atom, Cloud, Palette, Facebook, ExternalLink, Server, Database, GitBranch, Terminal } from 'lucide-react';
+import { Briefcase, Calendar, Code, Download, Github, GraduationCap, Instagram, Linkedin, PenTool, Star, Twitter, Users, Atom, Cloud, Palette, Facebook, ExternalLink, Server, Database, GitBranch, Terminal, BrainCircuit, TestTube, Share2 } from 'lucide-react';
 import Image from 'next/image';
 import { Typewriter } from '@/components/typewriter';
 
@@ -17,21 +18,33 @@ import { ContactDetails } from '@/components/contact-details';
 import { ProjectsCarousel } from '@/components/projects-carousel';
 
 const skills = [
+    // Frontend
     { name: 'React/Next.js', icon: <Atom className="w-full h-full" /> },
-    { name: 'JavaScript/ES6+', icon: <Code className="w-full h-full" /> },
     { name: 'TypeScript', icon: <Code className="w-full h-full" /> },
-    { name: 'HTML5 & CSS3', icon: <Palette className="w-full h-full" /> },
+    { name: 'Redux Toolkit', icon: <Share2 className="w-full h-full" /> },
     { name: 'Tailwind CSS', icon: <Palette className="w-full h-full" /> },
-    { name: 'Redux Toolkit', icon: <Atom className="w-full h-full" /> },
+    { name: 'SSR & SSG', icon: <Server className="w-full h-full" /> },
+    { name: 'Component Arch.', icon: <GitBranch className="w-full h-full" /> },
+    
+    // Backend
     { name: 'Node.js/Express', icon: <Server className="w-full h-full" /> },
+    { name: 'RESTful APIs', icon: <Share2 className="w-full h-full" /> },
+    { name: 'JWT Auth', icon: <Users className="w-full h-full" /> },
+
+    // AI & Data
+    { name: 'Gemini Models', icon: <BrainCircuit className="w-full h-full" /> },
+    { name: 'LLM Fine-tuning', icon: <BrainCircuit className="w-full h-full" /> },
+    { name: 'Sentiment Analysis', icon: <BrainCircuit className="w-full h-full" /> },
+    
+    // Databases
     { name: 'MongoDB', icon: <Database className="w-full h-full" /> },
     { name: 'Firebase', icon: <Cloud className="w-full h-full" /> },
-    { name: 'Git & GitHub', icon: <GitBranch className="w-full h-full" /> },
-    { name: 'Figma to Code', icon: <PenTool className="w-full h-full" /> },
-    { name: 'REST APIs', icon: <Server className="w-full h-full" /> },
-    { name: 'VS Code', icon: <Terminal className="w-full h-full" /> },
-    { name: 'Postman', icon: <Terminal className="w-full h-full" /> },
-    { name: 'Performance Opt.', icon: <Users className="w-full h-full" /> },
+    { name: 'Mongoose', icon: <Database className="w-full h-full" /> },
+    
+    // Software Engineering
+    { name: 'System Design', icon: <GitBranch className="w-full h-full" /> },
+    { name: 'Testing', icon: <TestTube className="w-full h-full" /> },
+    { name: 'Git & GitHub', icon: <Github className="w-full h-full" /> },
 ];
 
 
@@ -158,7 +171,7 @@ export default function Home() {
             <div className="md:col-span-2 space-y-6">
               <h2 className="font-headline text-3xl md:text-4xl font-bold">About Me</h2>
               <p className="text-lg text-brand-light-gray">
-                  I specialize in building modern, high-performance web applications. I combine strong engineering practices with clean UI/UX execution to build reliable and production-ready web solutions.
+                  I specialize in building high-quality, production-ready applications with a strong command over modern frontend, backend, AI, and scalable software engineering practices.
               </p>
               <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
                   <div className="flex flex-col items-center gap-2">
