@@ -1,65 +1,39 @@
-import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
 import { Badge } from '@/components/ui/badge';
 import { Card, CardContent, CardHeader } from '@/components/ui/card';
 import { cn } from '@/lib/utils';
-import { Atom, Code, Palette } from 'lucide-react';
-import type { ReactNode } from 'react';
+import { ArrowUpRight } from 'lucide-react';
 import type { BlogCategory } from '@/data/blog-data';
 
 type BlogCardProps = {
   category: BlogCategory;
   title: string;
   summary: string;
-  date: string;
   tags: string[];
-  authorName: string;
-  authorImg: string;
 };
 
-const categoryStyles: Record<BlogCategory, { className: string; icon: ReactNode }> = {
-  React: {
-    className: 'text-accent',
-    icon: <Atom className="h-6 w-6 text-accent" />,
-  },
-  CSS: {
-    className: 'text-css-pink',
-    icon: <Palette className="h-6 w-6 text-css-pink" />,
-  },
-  Frontend: {
-    className: 'text-frontend-blue',
-    icon: <Code className="h-6 w-6 text-frontend-blue" />,
-  },
-};
-
-export function BlogCard({ category, title, date, summary, authorName, authorImg, tags }: BlogCardProps) {
-  const style = categoryStyles[category];
+export function BlogCard({ category, title, summary, tags }: BlogCardProps) {
 
   return (
-    <Card className="card-glass card-glass-hover flex h-full min-w-[350px] max-w-[350px] flex-col justify-between">
-      <CardHeader>
-        <div className="flex items-center justify-between">
-          <span className="text-sm text-muted-foreground">{date}</span>
-          {style.icon}
-        </div>
-        <h3 className={cn('pt-4 text-xl font-bold', style.className)}>{title}</h3>
-      </CardHeader>
-      <CardContent className="flex flex-grow flex-col justify-between">
-        <p className="text-muted-foreground">{summary}</p>
-        <div className="mt-4">
-          <div className="mb-4 flex flex-wrap gap-2">
-            {tags.map((tag) => (
-              <Badge key={tag} variant="secondary">{tag}</Badge>
-            ))}
+    <a href="#" className="block h-full group">
+      <Card className="card-glass card-glass-hover flex h-full flex-col justify-between">
+        <CardHeader>
+          <div className="flex items-center justify-between mb-4">
+             <Badge variant="secondary">{category}</Badge>
+             <ArrowUpRight className="w-5 h-5 text-muted-foreground transition-transform duration-300 group-hover:translate-x-1 group-hover:-translate-y-1" />
           </div>
-          <div className="flex items-center gap-3">
-            <Avatar className="h-10 w-10">
-              <AvatarImage src={authorImg} alt={authorName} data-ai-hint="person portrait" />
-              <AvatarFallback>{authorName.substring(0, 2)}</AvatarFallback>
-            </Avatar>
-            <span className="font-semibold">{authorName}</span>
+          <h3 className={cn('text-xl font-bold')}>{title}</h3>
+        </CardHeader>
+        <CardContent className="flex flex-grow flex-col justify-between">
+          <p className="text-muted-foreground text-sm">{summary}</p>
+          <div className="mt-6">
+            <div className="flex flex-wrap gap-2">
+              {tags.map((tag) => (
+                <Badge key={tag} variant="outline">{tag}</Badge>
+              ))}
+            </div>
           </div>
-        </div>
-      </CardContent>
-    </Card>
+        </CardContent>
+      </Card>
+    </a>
   );
 }

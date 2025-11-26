@@ -1,48 +1,59 @@
-export type BlogCategory = 'React' | 'CSS' | 'Frontend';
+export type BlogCategory = 'Frontend' | 'Backend' | 'AI' | 'Architecture' | 'SaaS';
 
 export type Blog = {
   category: BlogCategory;
   title: string;
   summary: string;
-  date: string;
   tags: string[];
-  authorName: string;
-  authorImg: string;
 };
 
-const categories: BlogCategory[] = ['React', 'CSS', 'Frontend'];
-const sampleTitles = [
-    'Component Design Patterns', 'Advanced State Management', 'Performance Optimization', 'Building a Design System',
-    'CSS Grid vs. Flexbox', 'Mastering CSS Animations', 'Next-Gen CSS Selectors', 'Utility-First CSS',
-    'The Rise of Server Components', 'Micro-Frontends Explained', 'WebAssembly for JS Devs', 'API Design Best Practices'
+export const blogData: Blog[] = [
+    {
+        category: 'Architecture',
+        title: 'Building Scalable Frontend Architectures with React & Next.js',
+        summary: 'Insights on SSR/SSG, optimization, caching, and component patterns for large systems.',
+        tags: ['React', 'Next.js', 'Performance', 'System Design'],
+    },
+    {
+        category: 'Backend',
+        title: 'Designing Real-Time Systems with WebSockets & Redis',
+        summary: 'How to architect real-time chat, notifications, and presence tracking like enterprise apps.',
+        tags: ['WebSockets', 'Redis', 'Node.js', 'Real-Time'],
+    },
+    {
+        category: 'AI',
+        title: 'AI in Production – Integrating LLMs into SaaS Platforms',
+        summary: 'Patterns for using Gemini/LLMs, prompt engineering, fine-tuning, and monitoring.',
+        tags: ['Gemini', 'LLM', 'SaaS', 'AI/ML'],
+    },
+    {
+        category: 'Backend',
+        title: 'Mastering Microservices & API Gateways in Node.js',
+        summary: 'Designing services, load balancing, rate-limiting, and distributed workflows.',
+        tags: ['Microservices', 'Node.js', 'API Gateway', 'Architecture'],
+    },
+    {
+        category: 'AI',
+        title: 'Building ML-Driven Market Predictors for Stocks & Crypto',
+        summary: 'How sentiment, indicators, and time-series models power financial predictions.',
+        tags: ['AI/ML', 'Finance', 'Python', 'Data Science'],
+    },
+    {
+        category: 'SaaS',
+        title: 'Enterprise-Grade Authentication & Role Systems in Modern Apps',
+        summary: 'JWT, refresh tokens, RBAC, multi-tenant architecture, and security patterns.',
+        tags: ['Auth', 'Security', 'JWT', 'RBAC'],
+    },
+    {
+        category: 'Backend',
+        title: 'Optimizing MongoDB for High-Traffic Applications',
+        summary: 'Aggregation pipelines, indexing, schema design, and performance tuning.',
+        tags: ['MongoDB', 'Database', 'Performance', 'NoSQL'],
+    },
+    {
+        category: 'SaaS',
+        title: 'Creating Multi-Tenant SaaS Architectures with Next.js',
+        summary: 'Techniques for subscription systems, team workspaces, and admin dashboards.',
+        tags: ['SaaS', 'Next.js', 'Multi-Tenancy', 'Architecture'],
+    },
 ];
-const sampleSummaries = [
-    'Learn how to structure your components for maximum reusability and maintainability.',
-    'Discover advanced techniques for managing complex application state with context and reducers.',
-    'Tips and tricks to make your web applications faster and more responsive.',
-    'A step-by-step guide to creating a cohesive and scalable design system from scratch.',
-    'A comprehensive comparison to help you choose the right layout tool for the job.',
-    'Bring your UIs to life with stunning animations and transitions using pure CSS.',
-    'Unlock new possibilities with modern CSS selectors like :has() and :is().',
-    'Understand the philosophy and benefits of using a utility-first approach like Tailwind CSS.',
-    'How server components are changing the way we build web applications with frameworks like Next.js.',
-    'An architectural approach to breaking down large frontend monoliths into smaller, manageable pieces.',
-    'Explore how WebAssembly can be used to run high-performance code in the browser.',
-    'Principles for designing robust, scalable, and easy-to-use APIs for your applications.'
-];
-
-export const generatedBlogData: Blog[] = Array.from({ length: 30 }, (_, i) => {
-    const category = categories[i % categories.length];
-    const title = `${category}: ${sampleTitles[i % sampleTitles.length]}`;
-    const summary = sampleSummaries[i % sampleSummaries.length];
-    const date = `Oct ${30 - (i % 30)}, 2025`;
-    return {
-        category,
-        title,
-        summary,
-        date,
-        tags: ['Tips', 'Web', category],
-        authorName: 'Pratham S',
-        authorImg: 'https://placehold.co/40x40.png',
-    };
-});
