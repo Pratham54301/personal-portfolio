@@ -233,7 +233,7 @@ export default function Home() {
        
         <div className="md:col-span-1 flex justify-center">
             <Image
-              src="/hero.jpg"
+              src="/hero01.jpg"
               alt="Pratham S"
               width={400}
               height={500}
@@ -248,7 +248,7 @@ export default function Home() {
          <div className="grid md:grid-cols-3 gap-12 items-center">
             <div className="md:col-span-1 flex justify-center">
             <Image
-              src="/about.jpg"
+              src="/about01.jpg"
               alt="About Pratham"
               width={400}
               height={500}
