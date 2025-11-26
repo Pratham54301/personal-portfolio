@@ -6,8 +6,6 @@ import { Briefcase, Calendar, Code, Download, Github, GraduationCap, Instagram, 
 import Image from 'next/image';
 import { Typewriter } from '@/components/typewriter';
 
-import Hero from '/hero.jpg';
-import About from '/about.jpg';
 import Link from 'next/link';
 import { AnimatedCounter } from '@/components/animated-counter';
 import { Timeline } from '@/components/timeline';
@@ -17,34 +15,27 @@ import { BlogSection } from '@/components/blog-section';
 import { ContactDetails } from '@/components/contact-details';
 import { ProjectsCarousel } from '@/components/projects-carousel';
 
-const skills = [
-    // Frontend
-    { name: 'React/Next.js', icon: <Atom className="w-full h-full" /> },
-    { name: 'TypeScript', icon: <Code className="w-full h-full" /> },
-    { name: 'Redux Toolkit', icon: <Share2 className="w-full h-full" /> },
-    { name: 'Tailwind CSS', icon: <Palette className="w-full h-full" /> },
-    { name: 'SSR & SSG', icon: <Server className="w-full h-full" /> },
-    { name: 'Component Arch.', icon: <GitBranch className="w-full h-full" /> },
-    
-    // Backend
-    { name: 'Node.js/Express', icon: <Server className="w-full h-full" /> },
-    { name: 'RESTful APIs', icon: <Share2 className="w-full h-full" /> },
-    { name: 'JWT Auth', icon: <Users className="w-full h-full" /> },
-
-    // AI & Data
-    { name: 'Gemini Models', icon: <BrainCircuit className="w-full h-full" /> },
-    { name: 'LLM Fine-tuning', icon: <BrainCircuit className="w-full h-full" /> },
-    { name: 'Sentiment Analysis', icon: <BrainCircuit className="w-full h-full" /> },
-    
-    // Databases
-    { name: 'MongoDB', icon: <Database className="w-full h-full" /> },
-    { name: 'Firebase', icon: <Cloud className="w-full h-full" /> },
-    { name: 'Mongoose', icon: <Database className="w-full h-full" /> },
-    
-    // Software Engineering
-    { name: 'System Design', icon: <GitBranch className="w-full h-full" /> },
-    { name: 'Testing', icon: <TestTube className="w-full h-full" /> },
-    { name: 'Git & GitHub', icon: <Github className="w-full h-full" /> },
+const skillCategories = [
+    {
+      title: 'Frontend',
+      skills: ['React.js', 'Next.js', 'TypeScript', 'Redux Toolkit', 'Tailwind CSS', 'SSR/SSG', 'Component Architecture', 'Performance Optimization'],
+    },
+    {
+      title: 'Backend',
+      skills: ['Node.js', 'Express.js', 'REST APIs', 'JWT/Auth', 'Real-time APIs', 'Microservices fundamentals'],
+    },
+    {
+      title: 'AI & Data',
+      skills: ['Gemini / Fine-tuned LLM Models', 'Sentiment Analysis', 'Financial ML Models'],
+    },
+    {
+      title: 'Database',
+      skills: ['MongoDB', 'Firebase', 'Mongoose', 'Aggregation Pipelines'],
+    },
+    {
+      title: 'Software Engineering',
+      skills: ['System Design', 'Scalability Patterns', 'Testing (Unit & Integration)', 'Git/GitHub', 'Documentation'],
+    },
 ];
 
 
@@ -163,8 +154,8 @@ export default function Home() {
             </div>
             <div className="md:col-span-2 space-y-6">
               <h2 className="font-headline text-3xl md:text-4xl font-bold">About Me</h2>
-              <p className="text-lg text-brand-light-gray">
-                  I specialize in building high-quality, production-ready applications with a strong command over modern frontend, backend, AI, and scalable software engineering practices.
+               <p className="text-lg text-brand-light-gray">
+                I specialize in building high-quality, production-ready applications with a strong command over modern frontend, backend, AI, and scalable software engineering practices.
               </p>
               <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
                   <div className="flex flex-col items-center gap-2">
@@ -197,12 +188,18 @@ export default function Home() {
             {/* Skills Section */}
             <section id="skills" className="mb-20">
               <h2 className="font-headline text-3xl md:text-4xl font-bold text-center mb-12 uppercase">My Skills</h2>
-              <div className="mx-auto max-w-6xl overflow-hidden">
-                <div className="flex gap-8 overflow-x-auto pb-4 [-ms-overflow-style:none] [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">
-                    {skills.map((skill) => (
-                      <div key={skill.name} className="flex flex-col items-center justify-center gap-4 p-4 card-glass card-glass-hover flex-shrink-0 w-40 h-40">
-                        <div className="text-brand-violet w-12 h-12">{skill.icon}</div>
-                        <p className="font-semibold text-center text-brand-white">{skill.name}</p>
+               <div className="w-full overflow-hidden">
+                <div className="flex gap-8 overflow-x-auto pb-6 [-ms-overflow-style:none] [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">
+                    {skillCategories.map((category) => (
+                      <div key={category.title} className="card-glass card-glass-hover flex-shrink-0 w-[340px] p-6">
+                        <h3 className="font-headline text-xl font-bold text-brand-violet mb-4">{category.title}</h3>
+                        <div className="flex flex-wrap gap-2">
+                          {category.skills.map((skill) => (
+                            <span key={skill} className="bg-white/10 text-brand-white text-sm font-medium px-3 py-1 rounded-full">
+                              {skill}
+                            </span>
+                          ))}
+                        </div>
                       </div>
                     ))}
                 </div>
