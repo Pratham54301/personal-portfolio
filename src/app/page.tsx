@@ -218,7 +218,7 @@ export default function Home() {
           <div className="flex flex-col items-center md:items-start gap-6">
             <div className="flex flex-wrap justify-center gap-4">
             <Button asChild size="lg">
-            <Link href="https://forms.gle/7axq8mV9Y5T9YhmL8" target="_blank" rel="noopener noreferrer">Inquiry Now</Link>
+            <Link href="#contact">Inquiry Now</Link>
               </Button>
             </div>
             <div className="flex justify-center md:justify-start gap-4 mt-6">
@@ -334,7 +334,7 @@ Specialized in building SaaS platforms, AI-driven dashboards, real-time systems,
           <div className="text-center mb-12">
             <h2 className="font-headline text-3xl md:text-4xl font-bold">Let's Talk</h2>
             <p className="text-muted-foreground mt-2 max-w-2xl mx-auto">
-              I'll get back to you within 24 hours.
+              I build stable, scalable, and high-performance software systems with a focus on clean architecture. With experience across AI, full-stack development, and SaaS platforms, I deliver solutions that last. Let’s connect and bring your idea to life.
             </p>
           </div>
           <div className="grid md:grid-cols-1 lg:grid-cols-5 gap-12">
