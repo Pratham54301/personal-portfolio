@@ -60,34 +60,27 @@ const projects = [
 const myTimelineItems = [
     {
         icon: <Briefcase />,
-        date: 'August 2024 – Present',
-        title: 'Frontend Developer',
-        subtitle: 'N R Crew Software Pvt. Ltd. | Ahmedabad',
+        date: '2024 – Present',
+        title: 'Senior Software Developer',
+        subtitle: 'N R Crew (Remote / Ahmedabad)',
         description: [
-            'Built user-centric websites using HTML, CSS, JS',
-            'Introduced new tech and coding standards',
-            'Developed CMS and optimized code base'
+            'Led development of full-stack AI-driven applications using Next.js, Node.js, MongoDB, and cloud services.',
+            'Architected scalable UI systems, reusable component libraries, and optimized build pipelines.',
+            'Implemented end-to-end authentication, RBAC, admin dashboards, and real-time data modules.',
+            'Mentored junior developers, performed code reviews, and enforced coding standards.',
+            'Improved application performance by 30–40% using memoization, dynamic imports, and caching.'
         ]
     },
     {
         icon: <Briefcase />,
-        date: 'August 2024 – September 2024',
-        title: 'Data Entry Operator',
-        subtitle: 'Solaimalai Enterprises | Ahmedabad',
+        date: '2023 – 2024',
+        title: 'React.js / Next.js Developer',
+        subtitle: 'N R Crew (Ahmedabad)',
         description: [
-            'Managed customer data and engaged effectively',
-            'Maintained database accuracy and performed routine maintenance'
-        ]
-    },
-    {
-        icon: <Briefcase />,
-        date: 'July 2023 – May 2024',
-        title: 'Booking Executive',
-        subtitle: 'Kabra Express Logistics Pvt. Ltd. | Ahmedabad',
-        description: [
-            'Built strong supplier relationships and optimized bookings',
-            'Maintained accurate records and handled client schedules',
-            'Developed strategies and managed client communication'
+            'Built production-ready UI for enterprise clients using React, Next.js, Tailwind, and custom design systems.',
+            'Converted complex Figma designs into pixel-perfect screens with clean architecture.',
+            'Integrated REST APIs with robust error states, loaders, retry handlers, and fallback UI.',
+            'Enhanced bundle performance (reducing first-load JS up to 25%).'
         ]
     },
     {
@@ -255,5 +248,3 @@ export default function Home() {
     </div>
   )
 }
-
-    
