@@ -67,19 +67,19 @@
     scroll-padding-top: 5rem; /* Offset for sticky nav */
   }
   body {
-    @apply bg-gradient-to-br from-[#5A2CA0] to-[#FF7A3E] text-[#D1D5DB] leading-relaxed;
+    @apply bg-background text-foreground leading-relaxed;
     line-height: 1.7;
   }
   h1, h2, h3, h4, h5, h6 {
-    @apply font-headline text-white tracking-wide;
+    @apply font-headline text-foreground tracking-wide;
   }
 }
 
 @layer components {
   .card-glass {
-    @apply bg-white/10 backdrop-blur-md border border-white/20 shadow-lg rounded-2xl;
+    @apply bg-card/50 backdrop-blur-md border border-white/10 shadow-lg rounded-2xl;
   }
   .card-glass-hover {
-    @apply transition-all duration-300 hover:bg-white/20 hover:border-white/30 hover:shadow-2xl hover:-translate-y-1;
+    @apply transition-all duration-300 hover:bg-card/75 hover:border-white/20 hover:shadow-2xl hover:-translate-y-1;
   }
 }
