@@ -36,8 +36,9 @@ export function ContactDetails() {
     <div className="space-y-6">
       <h3 className="font-headline text-2xl font-bold uppercase">CONTACT ME HERE</h3>
       <p className="text-muted-foreground">
-        I am a passionate frontend developer with a strong foundation in HTML, CSS, JavaScript, and React. I enjoy
-        creating visually appealing and user-friendly web interfaces.
+      I build stable, scalable, and high-performance software systems with a focus on clean architecture.
+With experience across AI, full-stack development, and SaaS platforms, I deliver solutions that last.
+Let’s connect and bring your idea to life.
       </p>
       <div className="space-y-4">
         {contactDetailsList.map((detail) => {

@@ -334,7 +334,7 @@ Specialized in building SaaS platforms, AI-driven dashboards, real-time systems,
           <div className="text-center mb-12">
             <h2 className="font-headline text-3xl md:text-4xl font-bold">Let's Talk</h2>
             <p className="text-muted-foreground mt-2 max-w-2xl mx-auto">
-              I build stable, scalable, and high-performance software systems with a focus on clean architecture. With experience across AI, full-stack development, and SaaS platforms, I deliver solutions that last. Let’s connect and bring your idea to life.
+            I'll get back to you within 24 hours.
             </p>
           </div>
           <div className="grid md:grid-cols-1 lg:grid-cols-5 gap-12">
