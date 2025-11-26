@@ -10,20 +10,6 @@ import { Textarea } from '@/components/ui/textarea';
 import { Label } from '@/components/ui/label';
 import Link from 'next/link';
 
-function SubmitButton() {
-  const { pending } = useFormStatus();
-  return (
-    <Button
-      type="submit"
-      disabled={pending}
-      className="w-full bg-gradient-to-r from-accent to-primary text-accent-foreground transition-opacity hover:opacity-90 rounded-xl"
-      size="lg"
-    >
-      {pending ? 'Sending...' : 'Send Message'}
-    </Button>
-  );
-}
-
 export function ContactForm() {
   const initialState: ContactFormState = {
     message: '',
@@ -96,7 +82,20 @@ export function ContactForm() {
         </div>
       )}
       <div className="flex flex-col sm:flex-row items-center gap-4">
-        <SubmitButton />
+        <Link
+          href="https://wa.me/917777967668"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="w-full"
+        >
+          <Button
+            type="button"
+            className="w-full bg-gradient-to-r from-accent to-primary text-accent-foreground transition-opacity hover:opacity-90 rounded-xl"
+            size="lg"
+          >
+            Send Message
+          </Button>
+        </Link>
         <Button asChild size="lg" className="w-full rounded-xl">
           <Link href="https://forms.gle/7axq8mV9Y5T9YhmL8" target="_blank" rel="noopener noreferrer">
             Inquiry Now
