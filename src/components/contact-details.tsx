@@ -3,29 +3,29 @@ import Link from 'next/link';
 
 const contactDetailsList = [
   {
-    icon: <MapPin className="w-6 h-6 text-primary" />,
+    icon: <MapPin className="w-6 h-6 text-accent-green-neon" />,
     label: 'Location',
     value: 'Ahmedabad, India',
   },
   {
-    icon: <Mail className="w-6 h-6 text-primary" />,
+    icon: <Mail className="w-6 h-6 text-accent-green-neon" />,
     label: 'Email',
     value: 'prathams54301@gmail.com',
     href: 'mailto:prathams54301@gmail.com',
   },
   {
-    icon: <GraduationCap className="w-6 h-6 text-primary" />,
+    icon: <GraduationCap className="w-6 h-6 text-accent-green-neon" />,
     label: 'Education',
     value: 'Silver Oak College of Engineering, Gujarat',
   },
   {
-    icon: <Phone className="w-6 h-6 text-primary" />,
+    icon: <Phone className="w-6 h-6 text-accent-green-neon" />,
     label: 'Mobile Number',
     value: '7777967668',
     href: 'tel:7777967668',
   },
   {
-    icon: <Languages className="w-6 h-6 text-primary" />,
+    icon: <Languages className="w-6 h-6 text-accent-green-neon" />,
     label: 'Languages',
     value: 'Gujarati, Hindi, English',
   },

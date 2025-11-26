@@ -8,7 +8,7 @@ export function BlogSection() {
         <section id="blogs" className="py-20">
             <div className="text-center mb-12">
                 <h2 className="font-headline text-3xl md:text-4xl font-bold">
-                    MY <span className="text-accent">ARTICLES</span>
+                    MY <span className="text-accent-green-neon">ARTICLES</span>
                 </h2>
                 <p className="text-muted-foreground mt-2 max-w-2xl mx-auto">
                     A collection of my thoughts on architecture, AI, and high-performance engineering.

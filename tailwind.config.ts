@@ -28,10 +28,7 @@ export default {
         'brand-orange': '#FF7A3E',
         'brand-white': '#FFFFFF',
         'brand-light-gray': '#D1D5DB',
-        'accent-green': '#24AB63',
-        'accent-green-neon': '#00FF9D',
-        'css-pink': '#FF4081',
-        'frontend-blue': '#03A9F4',
+        'accent-green-neon': 'hsl(var(--accent))',
         background: 'hsl(var(--background))',
         foreground: 'hsl(var(--foreground))',
         card: {

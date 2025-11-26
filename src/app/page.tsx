@@ -209,7 +209,7 @@ export default function Home() {
       <section id="home" className="min-h-[calc(100vh-5rem)] flex flex-col-reverse md:flex-row items-center justify-center gap-12 py-20">
         <div className="flex flex-col items-center md:items-start text-center md:text-left space-y-6">
           <h1 className="font-headline text-4xl md:text-6xl font-bold tracking-tight h-40 md:h-24">
-            <span className="block">Hi, I'm</span>
+            <span className="block text-foreground/80">Hi, I'm</span>
             <Typewriter texts={['Prathamkumar Sakariya', 'software developer']} className="text-primary drop-shadow-[0_1.2px_1.2px_rgba(0,0,0,0.8)]" />
           </h1>
           <p className="text-lg md:text-xl text-muted-foreground max-w-xl">
@@ -222,11 +222,11 @@ export default function Home() {
               </Button>
             </div>
             <div className="flex justify-center md:justify-start gap-4 mt-6">
-               <Link href="www.linkedin.com/in/prathamkumar-sakariya-171851311" aria-label="LinkedIn" className="bg-secondary text-secondary-foreground p-3 rounded-full inline-flex items-center justify-center hover:bg-primary hover:text-primary-foreground transition-colors"><Linkedin /></Link>
-               <Link href="https://github.com/Pratham54301" aria-label="GitHub" className="bg-secondary text-secondary-foreground p-3 rounded-full inline-flex items-center justify-center hover:bg-primary hover:text-primary-foreground transition-colors"><Github /></Link>
-               <Link href="https://x.com/prathams54301" aria-label="Twitter" className="bg-secondary text-secondary-foreground p-3 rounded-full inline-flex items-center justify-center hover:bg-primary hover:text-primary-foreground transition-colors"><Twitter /></Link>
-               <Link href="https://www.instagram.com/pratham_.04_10" aria-label="Instagram" className="bg-secondary text-secondary-foreground p-3 rounded-full inline-flex items-center justify-center hover:bg-primary hover:text-primary-foreground transition-colors"><Instagram /></Link>
-               <Link href="https://www.facebook.com/pratham.04.10" aria-label="Facebook" className="bg-secondary text-secondary-foreground p-3 rounded-full inline-flex items-center justify-center hover:bg-primary hover:text-primary-foreground transition-colors"><Facebook /></Link>
+               <Link href="www.linkedin.com/in/prathamkumar-sakariya-171851311" aria-label="LinkedIn" className="bg-secondary text-secondary-foreground p-3 rounded-full inline-flex items-center justify-center hover:bg-accent hover:text-accent-foreground transition-colors"><Linkedin /></Link>
+               <Link href="https://github.com/Pratham54301" aria-label="GitHub" className="bg-secondary text-secondary-foreground p-3 rounded-full inline-flex items-center justify-center hover:bg-accent hover:text-accent-foreground transition-colors"><Github /></Link>
+               <Link href="https://x.com/prathams54301" aria-label="Twitter" className="bg-secondary text-secondary-foreground p-3 rounded-full inline-flex items-center justify-center hover:bg-accent hover:text-accent-foreground transition-colors"><Twitter /></Link>
+               <Link href="https://www.instagram.com/pratham_.04_10" aria-label="Instagram" className="bg-secondary text-secondary-foreground p-3 rounded-full inline-flex items-center justify-center hover:bg-accent hover:text-accent-foreground transition-colors"><Instagram /></Link>
+               <Link href="https://www.facebook.com/pratham.04.10" aria-label="Facebook" className="bg-secondary text-secondary-foreground p-3 rounded-full inline-flex items-center justify-center hover:bg-accent hover:text-accent-foreground transition-colors"><Facebook /></Link>
             </div>
           </div>
         </div>
@@ -264,21 +264,21 @@ Specialized in building SaaS platforms, AI-driven dashboards, real-time systems,
               </p>
               <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
                   <div className="flex flex-col items-center gap-2">
-                      <Briefcase className="w-10 h-10 text-primary" />
+                      <Briefcase className="w-10 h-10 text-accent-green-neon" />
                       <p className="text-3xl font-bold"><AnimatedCounter value={8} />+</p>
                       <p className="text-muted-foreground/80">Projects</p>
                   </div>
                    <div className="flex flex-col items-center gap-2">
-                      <Calendar className="w-10 h-10 text-primary" />
+                      <Calendar className="w-10 h-10 text-accent-green-neon" />
                       <p className="text-3xl font-bold"><AnimatedCounter value={2} /></p>
                       <p className="text-muted-foreground/80">Years Experience</p>                  </div>
                    <div className="flex flex-col items-center gap-2">
-                      <Users className="w-10 h-10 text-primary" />
+                      <Users className="w-10 h-10 text-accent-green-neon" />
                       <p className="text-3xl font-bold"><AnimatedCounter value={8} />+</p>
                       <p className="text-muted-foreground/80">Happy Clients</p>
                   </div>
                    <div className="flex flex-col items-center gap-2">
-                      <Star className="w-10 h-10 text-primary" />
+                      <Star className="w-10 h-10 text-accent-green-neon" />
                       <p className="text-3xl font-bold">4.5<span className='text-xl'>★</span></p>
                       <p className="text-muted-foreground/80">Reviews</p>
                   </div>
@@ -297,7 +297,7 @@ Specialized in building SaaS platforms, AI-driven dashboards, real-time systems,
                 <div className="flex gap-8 overflow-x-auto pb-6 [-ms-overflow-style:none] [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">
                     {skillCategories.map((category) => (
                       <div key={category.title} className="bg-card/50 backdrop-blur-md border border-border/10 shadow-lg rounded-2xl flex-shrink-0 w-[340px] p-6 transition-all duration-300 hover:bg-card/75 hover:border-border/20 hover:shadow-2xl hover:-translate-y-1">
-                        <h3 className="font-headline text-xl font-bold text-primary mb-4">{category.title}</h3>
+                        <h3 className="font-headline text-xl font-bold text-accent-green-neon mb-4">{category.title}</h3>
                         <div className="flex flex-wrap gap-2">
                           {category.skills.map((skill) => (
                             <span key={skill} className="bg-primary/10 text-primary text-sm font-medium px-3 py-1 rounded-full">
@@ -334,7 +334,7 @@ Specialized in building SaaS platforms, AI-driven dashboards, real-time systems,
           <div className="text-center mb-12">
             <h2 className="font-headline text-3xl md:text-4xl font-bold">Let's Talk</h2>
             <p className="text-muted-foreground mt-2 max-w-2xl mx-auto">
-            I'll get back to you within 24 hours.
+            I build stable, scalable, and high-performance software systems with a focus on clean architecture. With experience across AI, full-stack development, and SaaS platforms, I deliver solutions that last. Let’s connect and bring your idea to life.
             </p>
           </div>
           <div className="grid md:grid-cols-1 lg:grid-cols-5 gap-12">

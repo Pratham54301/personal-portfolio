@@ -57,7 +57,7 @@ export function ProjectsGrid({ projects }: ProjectsGridProps) {
   return (
     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
       {projects.map((project, index) => (
-        <Card key={index} className="bg-card/50 backdrop-blur-md border border-border/10 shadow-lg rounded-2xl flex flex-col h-full transition-all duration-300 hover:shadow-2xl hover:-translate-y-2 hover:border-primary/50">
+        <Card key={index} className="bg-card/50 backdrop-blur-md border border-border/10 shadow-lg rounded-2xl flex flex-col h-full transition-all duration-300 hover:shadow-2xl hover:-translate-y-2 hover:border-accent/50">
             <CardHeader>
                 <div className="flex justify-between items-start">
                     <div>
@@ -79,7 +79,7 @@ export function ProjectsGrid({ projects }: ProjectsGridProps) {
                 <ul className="space-y-2 text-sm text-muted-foreground mb-6">
                     {project.details.map((detail, i) => (
                         <li key={i} className="flex items-start gap-2">
-                            <CheckCircle className="w-4 h-4 mt-1 text-primary flex-shrink-0" />
+                            <CheckCircle className="w-4 h-4 mt-1 text-accent-green-neon flex-shrink-0" />
                             <span>{detail}</span>
                         </li>
                     ))}

@@ -27,7 +27,7 @@ export function Timeline({ items }: TimelineProps) {
         >
           {/* Dot on the timeline */}
           <div
-            className="absolute left-6 top-5 -translate-x-1/2 flex h-8 w-8 items-center justify-center rounded-full bg-primary text-primary-foreground"
+            className="absolute left-6 top-5 -translate-x-1/2 flex h-8 w-8 items-center justify-center rounded-full bg-accent text-accent-foreground"
           >
             {item.icon}
           </div>
@@ -36,7 +36,7 @@ export function Timeline({ items }: TimelineProps) {
              <Card className="card-glass card-glass-hover">
                 <CardHeader>
                     <div className="text-sm text-accent-green-neon">{item.date}</div>
-                    <CardTitle className="font-headline text-lg">{item.title}</CardTitle>
+                    <CardTitle className="font-headline text-lg text-primary">{item.title}</CardTitle>
                     <div className="font-semibold text-muted-foreground">{item.subtitle}</div>
                 </CardHeader>
                 <CardContent>
