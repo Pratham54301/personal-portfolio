@@ -8,6 +8,7 @@ import { cn } from '@/lib/utils';
 import { Menu, X } from 'lucide-react';
 import { Button } from './ui/button';
 import Image from 'next/image';
+import Logoimage from '@/public/logo.png'
 
 const navLinks = [
   { href: '/#home', label: 'Home', sectionId: 'home' },
@@ -21,7 +22,7 @@ const navLinks = [
 
 function Logo() {
     return (
-        <Image src="/logo.png" alt="Logo" width={40} height={40} className="text-primary" />
+        <Image src="{Logoimage}" alt="Logo" width={40} height={40} className="text-primary" />
     )
 }
 
